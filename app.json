@@ -1,13 +1,53 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/bookrack/bookrack",
+    "pages/bookstore/bookstore",
+    "pages/listen/listen",
+    "pages/mine/mine",
+    "pages/bookinfo/bookinfo",
+    "pages/bookpage/bookpage",
+    "pages/classify/classify",
+    "pages/list/list"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#d5a3c9",
+    "navigationBarTitleText": "小众闲书",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#d5a3c9",
+    "borderStyle": "white",
+    "position": "bottom",
+    "backgroundColor":"#fff",
+    "list": [
+      {
+        "pagePath": "pages/bookrack/bookrack",
+        "text": "书架",
+        "iconPath": "assets/tabs/bookrack.png",
+        "selectedIconPath": "assets/tabs/bookrack-active.png"
+      },
+      {
+        "pagePath": "pages/bookstore/bookstore",
+        "text": "书城",
+        "iconPath": "assets/tabs/bookstore.png",
+        "selectedIconPath": "assets/tabs/bookstore-active.png"
+       
+      },
+      {
+        "pagePath": "pages/listen/listen",
+        "text": "听书",
+        "iconPath": "assets/tabs/listen.png",
+        "selectedIconPath": "assets/tabs/listen-active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "assets/tabs/mine.png",
+        "selectedIconPath": "assets/tabs/mine-active.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

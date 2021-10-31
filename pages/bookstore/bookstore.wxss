@@ -1,0 +1,8 @@
+.showimg {
+  padding: 0 15rpx;
+}
+.showimg .slideimg {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 30rpx;
+}

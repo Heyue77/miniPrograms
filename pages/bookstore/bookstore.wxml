@@ -1,0 +1,13 @@
+<!-- pages/bookstore/bookstore.wxml -->
+<!-- 搜索框 -->
+<van-search value="{{ value }}" shape="round" background="#e3dae9" placeholder="请输入搜索关键词" />
+<!-- 大图 -->
+<view class="showimg">
+    <image class="slideimg" src="http://media7.tadu.com/2019/11/19/1/5/2/0/15202a393568442b960fc68f0f408490.jpg" mode="widthFix" lazy-load="{{true}}" />
+</view>
+<!-- 宫格 -->
+<van-grid column-num="3">
+    <van-grid-item wx:for="{{slide}}" wx:for-item="item" wx:key="id" icon="{{item.icon}}" text="{{item.name}}" url="{{item.url}}" link-type="{{item.link}}"/>
+</van-grid>
+
+<!-- 畅销短篇-->
