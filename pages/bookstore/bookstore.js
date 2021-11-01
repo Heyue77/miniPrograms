@@ -1,10 +1,12 @@
 // pages/bookstore/bookstore.js
+import {requestGet,bannerURL} from "../../utils/reqeust"
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    banner:[],
     slide:[
       {
         id:1,
@@ -28,16 +30,32 @@ Page({
         link:"switchTab"
       }
      
-    ]
+    ],
+    shortps:[],
+    populars:[],
+    likelist:[],
+    shortpid:null,
+    popid:null,
+    likeid:null
 
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad() {
+    this.getBannerData();
   },
+  async getBannerData() {
+    const result = await requestGet(bannerURL);
+    this.setData({
+      banner: result.data.spread[0].advs,
+      shortps:result.data.nodes[0].books.slice(0,2),
+      populars:result.data.nodes[1].books.slice(0,4),
+      likelist:result.data.nodes[2].books,
+      shortpid: result.data.nodes[0]._id,
+      popid:result.data.nodes[1]._id,
+      likeid: result.data.nodes[2]._id
+    });
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

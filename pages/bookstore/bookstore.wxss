@@ -1,8 +1,118 @@
-.showimg {
-  padding: 0 15rpx;
-}
-.showimg .slideimg {
+.swiper {
   width: 100%;
-  margin: 0 auto;
+  height: 300rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.swiper .swpitem {
+  width: 100%;
+}
+.swiper .swpitem .swpimg {
+  width: 700rpx;
+  height: 300rpx;
+  border-radius: 20rpx;
+}
+.van-grid-item__content {
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+.shortp {
+  width: 700rpx;
+  margin: 30rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  overflow: hidden;
+}
+.shortp .title {
+  display: flex;
+  margin-top: 20rpx;
+}
+.shortp .title .titleTag {
+  flex: 5;
+  font-size: 20px;
+  display: flex;
+}
+.shortp .title .more {
+  flex: 2;
+  text-align: right;
+  margin-right: 25rpx;
+  font-size: 14px;
+  color: #aaa;
+}
+.shortp .title .more .icon-changyong_fanhui {
+  font-size: 12px;
+}
+.shortp .shorpcontent {
+  display: flex;
+}
+.shortp .shorpcontent .shortpitem {
+  width: 45%;
+  flex: 1;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 30rpx 0;
+}
+.shortp .shorpcontent .shortpitem .itemimg {
+  width: 100%;
+}
+.shortp .shorpcontent .shortpitem .itemimg image {
+  width: 80%;
+}
+.shortp .shorpcontent .shortpitem .author {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 20rpx;
+}
+.icon-yinpai {
+  color: #d8ab39;
+  margin-left: 20rpx;
+  font-size: 22px;
+  margin: 0 18rpx;
+}
+.icon-jinpai {
+  color: #f0e116;
+  margin-left: 20rpx;
+  font-size: 20px;
+}
+.tongpai {
+  color: #b8cf63;
+}
+.van-cell .iconview {
+  margin-right: 10rpx;
+}
+.van-cell .iconview .icon {
+  width: 130rpx;
+  height: 130rpx;
+}
+.van-cell .shortinfo {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /*两行,超出为省略号*/
+  -webkit-box-orient: vertical;
+  align-content: center;
+  margin-bottom: 15rpx;
+}
+.van-cell .auty {
+  display: flex;
+}
+.van-cell .auty .author {
+  flex: 5;
+}
+.van-cell .auty .type {
+  flex: 2;
+  background-color: rgba(196, 180, 191, 0.3);
   border-radius: 30rpx;
+  color: #5f5b5b;
+  font-size: 10px;
+  text-align: center;
+  padding: 0 8rpx;
+  margin-left: 10rpx;
+}
+.bottomline {
+  font-size: 12px;
+  color: #aaa;
+  text-align: center;
 }

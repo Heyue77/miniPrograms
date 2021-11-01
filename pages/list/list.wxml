@@ -1,2 +1,22 @@
-<!--pages/list/list.wxml-->
-<text>pages/list/list.wxml</text>
+<!-- pages/list/list.wxml -->
+<van-cell-group>
+    <van-cell url="/pages/bookinfo/bookinfo?id={{item._id}}" center use-label-slot wx:for="{{resultlist}}" wx:for-item="item" wx:key="id" title="{{item.title}}">
+        <view slot="icon" class="iconview">
+            <image class="icon" src="{{item.cover}}" />
+        </view>
+        <view slot="label">
+            <view class="shortinfo">{{item.shortIntro}}</view>
+            <view class="auty">
+                <view class="author">
+                    <text class="iconfont icon-fl-renyuan"></text>
+                    {{item.author}}
+                </view>
+                <view class="type">{{item.majorCate}}</view>
+                <view class="type">{{item.isSerial?"连载":"完结"}}</view>
+            </view>
+        </view>
+    </van-cell>
+</van-cell-group>
+<view class="bottomline" >
+    没有更多书籍~
+</view>
