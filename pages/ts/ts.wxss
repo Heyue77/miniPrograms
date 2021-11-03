@@ -1,0 +1,24 @@
+.th {
+  width: 100%;
+}
+.container {
+  width: 100%;
+}
+.container .nr {
+  line-height: 120rpx;
+  font-size: 72rpx;
+  width: 100%;
+}
+.container .bf {
+  display: flex;
+}
+.container .bf button {
+  background-color: transparent;
+  flex: 1;
+}
+.container .bf button text {
+  color: #ff6700;
+  font-size: 100rpx;
+  line-height: 300rpx;
+  text-align: center;
+}

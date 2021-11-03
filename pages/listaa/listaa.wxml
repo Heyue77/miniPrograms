@@ -1,0 +1,12 @@
+<view wx:key="*this">
+    <image class="tp" src="{{resourcem.data.bookDetail.bestCover}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+      
+</view>
+  
+<van-cell-group >
+    <van-cell  wx:for="{{resource.list}}" wx:for-item="item" 
+    wx:key="id" title="{{item.name}}"
+     url="/pages/ts/ts?id={{item.id}}&bookId={{bookId}}&sections={{item.section}}&cover={{resourcem.data.bookDetail.bestCover}}">
+       
+    </van-cell>
+</van-cell-group>

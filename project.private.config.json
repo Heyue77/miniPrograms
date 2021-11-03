@@ -1,24 +1,42 @@
 {
-  "setting": {},
-  "condition": {
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "name": "pages/listen/listen",
-          "pathName": "pages/listen/listen",
-          "query": "",
-          "scene": null
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/listen/listen",
+                    "pathName": "pages/listen/listen",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/lista/lista",
+                    "pathName": "pages/lista/lista",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/listaa/listaa",
+                    "pathName": "pages/listaa/listaa",
+                    "query": "id=5181",
+                    "scene": null
+                },
+                {
+                    "name": "pages/ts/ts",
+                    "pathName": "pages/ts/ts",
+                    "query": "",
+                    "scene": null
+                }
+            ]
         }
-      ]
     }
-  }
 }

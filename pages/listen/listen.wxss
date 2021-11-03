@@ -1,1 +1,34 @@
-/* pages/listen/listen.wxss */
+.cont .tabs {
+  display: flex;
+}
+.cont .tabs .item {
+  flex: 1;
+  text-align: center;
+  line-height: 90rpx;
+}
+.cont .tabs .item.active {
+  border-bottom: 2px solid red;
+}
+.cont .tuijian {
+  display: flex;
+  margin-top: 10px;
+}
+.cont .tuijian .jianjie {
+  flex-direction: column;
+  display: flex;
+  height: 145px;
+  flex: 5;
+}
+.cont .tuijian .jianjie h5 {
+  flex: 3;
+  font-size: 14px;
+  color: #888;
+  overflow: hidden;
+  padding: 0;
+}
+.cont .tuijian .jianjie h4 {
+  flex: 1;
+}
+.cont .tuijian image {
+  flex: 2;
+}

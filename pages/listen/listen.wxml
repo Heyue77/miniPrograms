@@ -1,3 +1,18 @@
-<!--pages/listen/listen.wxml-->
+<!-- pages/listen/listen.wxml -->
 <van-search value="{{ value }}" shape="round" background="#e3dae9" placeholder="请输入搜索关键词" />
-
+<view class="cont">
+    <van-cell-group class="cellgroup">
+    <van-cell title="类别"></van-cell>
+        <van-cell title="{{item.title}}" url="/pages/lista/lista?id={{item.id}}" wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" wx:key="id" data-index="{{idx}}" is-link />
+        <!-- <van-cell title="儿童" url="/pages/lista/lista" is-link />
+        <van-cell title="文学" url="/pages/lista/lista" is-link />
+        <van-cell title="情感" url="/pages/lista/lista" is-link />
+        <van-cell title="相声评书" url="/pages/lista/lista" is-link />
+        <van-cell title="脱口秀" url="/pages/lista/lista" is-link />
+        <van-cell title="历史" url="/pages/lista/lista" is-link />
+        <van-cell title="财经" url="/pages/lista/lista" is-link />
+        <van-cell title="音乐" url="/pages/lista/lista" is-link />
+        <van-cell title="戏曲" url="/pages/lista/lista" is-link /> -->
+    </van-cell-group>
+    
+</view>

@@ -1,4 +1,35 @@
 /**app.wxss**/
-page{
-  background-color: #e3dae9;
+
+page {
+    background-color: #e3dae9;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    /* Project id 2911043 */
+    src: url('//at.alicdn.com/t/font_2911043_ioq4ktyt0a.woff2?t=1635905258772') format('woff2'), url('//at.alicdn.com/t/font_2911043_ioq4ktyt0a.woff?t=1635905258772') format('woff'), url('//at.alicdn.com/t/font_2911043_ioq4ktyt0a.ttf?t=1635905258772') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-yousanjiao:before {
+    content: "\e600";
+}
+
+.icon-zanting:before {
+    content: "\e87a";
+}
+
+.icon-bofang:before {
+    content: "\e87c";
+}
+
+.icon-zuosanjiao:before {
+    content: "\e649";
 }

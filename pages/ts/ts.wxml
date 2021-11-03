@@ -1,0 +1,22 @@
+
+<view>
+  <image class="th" src="{{cover}}" />
+</view>
+<view class="container">
+  <view wx:for="{{resource.list}}" wx:for-item="item" wx:key="id">
+  <text class="nr">第{{item.section}}章</text>
+    <audio src="{{item.path}}}" id="myAudio"></audio>
+  </view>
+  <view class="bf">
+    <button bindtap="audioPlay">
+      <text class="iconfont icon-zanting"></text>
+      播放
+    </button>
+    <button bindtap="audioPause">
+      <text class="iconfont icon-bofang"></text>
+      暂停
+    </button>
+  </view>
+  <!-- <button type="primary" bindtap="audioPlay">播放</button>
+  <button type="primary" bindtap="audioPause">暂停</button> -->
+</view>

@@ -1,0 +1,52 @@
+.tuijian {
+  display: flex;
+  margin-top: 10px;
+}
+.tuijian .jianjie {
+  flex-direction: column;
+  display: flex;
+  height: 145px;
+  flex: 5;
+}
+.tuijian .jianjie h5 {
+  flex: 3;
+  font-size: 14px;
+  color: #888;
+  overflow: hidden;
+  padding: 0;
+}
+.tuijian .jianjie h4 {
+  flex: 1;
+}
+.tuijian image {
+  flex: 2;
+}
+.ts {
+  display: flex;
+}
+.ts .iconview {
+  margin-right: 10rpx;
+}
+.ts .iconview .icon {
+  width: 240rpx;
+  height: 240rpx;
+}
+.ts .label {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+}
+.ts .label .name {
+  flex: 1;
+}
+.ts .label .desc {
+  flex: 3;
+  color: #888;
+  font-size: 36rpx;
+  overflow: hidden;
+}
+.ts .label .author {
+  flex: 1;
+  font-size: 48rpx;
+  color: #333;
+}

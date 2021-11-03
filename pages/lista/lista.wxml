@@ -1,0 +1,216 @@
+<!-- <view class="tuijian" wx:for="{{resource.books}}" wx:for-item="item" wx:key="id">
+    <image src="{{item.cover}}" mode="widthFix" lazy-load="{{true}}" />
+    <view class="jianjie">
+        <h4>{{item.name}}</h4>
+        <h5>{{item.desc}}</h5>
+        <h4>{{item.author}}</h4>
+    </view>
+</view> -->
+<view>  
+    <van-cell-group wx:if="{{ids==='0'}}">
+        <van-cell class="ts" url="/pages/listaa/listaa?id={{item.id}}"
+         center use-label-slot wx:for="{{con1.books}}" wx:for-item="item" wx:key="id">
+            <view slot="icon" class="iconview">
+                <image class="icon" src="{{item.cover}}" />
+            </view>
+            <view slot="label">
+                <view class="name">{{item.name}}</view>
+                <view class="desc">{{item.desc}}</view>
+                <view class="author">{{item.author}}</view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+     <van-cell-group wx:elif="{{ids==='1'}}">
+        <van-cell class="ts" url="/pages/listaa/listaa?id={{item.id}}"
+         center use-label-slot wx:for="{{con2.books}}" wx:for-item="item" wx:key="id">
+            <view slot="icon" class="iconview">
+                <image class="icon" src="{{item.cover}}" />
+            </view>
+            <view slot="label">
+                <view class="name">{{item.name}}</view>
+                <view class="desc">{{item.desc}}</view>
+                <view class="author">{{item.author}}</view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+    <van-cell-group wx:elif="{{ids==='2'}}">
+        <van-cell class="ts" url="/pages/listaa/listaa?id={{item.id}}"
+         center use-label-slot wx:for="{{con3.books}}" wx:for-item="item" wx:key="id">
+            <view slot="icon" class="iconview">
+                <image class="icon" src="{{item.cover}}" />
+            </view>
+            <view slot="label">
+                <view class="name">{{item.name}}</view>
+                <view class="desc">{{item.desc}}</view>
+                <view class="author">{{item.author}}</view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+    <van-cell-group wx:elif="{{ids==='3'}}">
+        <van-cell class="ts" url="/pages/listaa/listaa?id={{item.id}}"
+         center use-label-slot wx:for="{{con4.books}}" wx:for-item="item" wx:key="id">
+            <view slot="icon" class="iconview">
+                <image class="icon" src="{{item.cover}}" />
+            </view>
+            <view slot="label">
+                <view class="name">{{item.name}}</view>
+                <view class="desc">{{item.desc}}</view>
+                <view class="author">{{item.author}}</view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+    <van-cell-group wx:elif="{{ids==='4'}}">
+        <van-cell class="ts" url="/pages/listaa/listaa?id={{item.id}}"
+         center use-label-slot wx:for="{{con5.books}}" wx:for-item="item" wx:key="id">
+            <view slot="icon" class="iconview">
+                <image class="icon" src="{{item.cover}}" />
+            </view>
+            <view slot="label">
+                <view class="name">{{item.name}}</view>
+                <view class="desc">{{item.desc}}</view>
+                <view class="author">{{item.author}}</view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+    <van-cell-group wx:elif="{{ids==='5'}}">
+        <van-cell class="ts" url="/pages/listaa/listaa?id={{item.id}}"
+         center use-label-slot wx:for="{{con6.books}}" wx:for-item="item" wx:key="id">
+            <view slot="icon" class="iconview">
+                <image class="icon" src="{{item.cover}}" />
+            </view>
+            <view slot="label">
+                <view class="name">{{item.name}}</view>
+                <view class="desc">{{item.desc}}</view>
+                <view class="author">{{item.author}}</view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+    <van-cell-group wx:else>
+        <van-cell class="ts" url="/pages/listaa/listaa?id={{item.id}}"
+         center use-label-slot wx:for="{{con7.books}}" wx:for-item="item" wx:key="id">
+            <view slot="icon" class="iconview">
+                <image class="icon" src="{{item.cover}}" />
+            </view>
+            <view slot="label">
+                <view class="name">{{item.name}}</view>
+                <view class="desc">{{item.desc}}</view>
+                <view class="author">{{item.author}}</view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+    
+</view>
+  
+
+<!-- <view wx:elif="{{item.id===1}}">
+    <van-cell-group>
+        <van-cell class="ts" url="/pages/listaa/listaa?id={{item.id}}" center use-label-slot wx:for="{{content.books}}" wx:for-item="item" wx:key="id">
+            <view slot="icon" class="iconview">
+                <image class="icon" src="{{item.cover}}" />
+            </view>
+            <view slot="label">
+                <view class="name">{{item.name}}</view>
+                <view class="desc">{{item.desc}}</view>
+                <view class="author">{{item.author}}</view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+</view>
+<view wx:elif="{{item.id===2}}">
+    <van-cell-group>
+        <van-cell class="ts" url="/pages/listaa/listaa?id={{item.id}}" center use-label-slot wx:for="{{content.books}}" wx:for-item="item" wx:key="id">
+            <view slot="icon" class="iconview">
+                <image class="icon" src="{{item.cover}}" />
+            </view>
+            <view slot="label">
+                <view class="name">{{item.name}}</view>
+                <view class="desc">{{item.desc}}</view>
+                <view class="author">{{item.author}}</view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+</view>
+<view wx:elif="{{item.id===3}}">
+    <van-cell-group>
+        <van-cell class="ts" url="/pages/listaa/listaa?id={{item.id}}" center use-label-slot wx:for="{{content.books}}" wx:for-item="item" wx:key="id">
+            <view slot="icon" class="iconview">
+                <image class="icon" src="{{item.cover}}" />
+            </view>
+            <view slot="label">
+                <view class="name">{{item.name}}</view>
+                <view class="desc">{{item.desc}}</view>
+                <view class="author">{{item.author}}</view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+</view>
+<view wx:elif="{{item.id===4}}">
+    <van-cell-group>
+        <van-cell class="ts" url="/pages/listaa/listaa?id={{item.id}}" center use-label-slot wx:for="{{content.books}}" wx:for-item="item" wx:key="id">
+            <view slot="icon" class="iconview">
+                <image class="icon" src="{{item.cover}}" />
+            </view>
+            <view slot="label">
+                <view class="name">{{item.name}}</view>
+                <view class="desc">{{item.desc}}</view>
+                <view class="author">{{item.author}}</view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+</view>
+<view wx:elif="{{item.id===5}">
+    <van-cell-group>
+        <van-cell class="ts" url="/pages/listaa/listaa?id={{item.id}}" center use-label-slot wx:for="{{content.books}}" wx:for-item="item" wx:key="id">
+            <view slot="icon" class="iconview">
+                <image class="icon" src="{{item.cover}}" />
+            </view>
+            <view slot="label">
+                <view class="name">{{item.name}}</view>
+                <view class="desc">{{item.desc}}</view>
+                <view class="author">{{item.author}}</view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+</view>
+<view wx:elif="{{item.id===6}}">
+    <van-cell-group>
+        <van-cell class="ts" url="/pages/listaa/listaa?id={{item.id}}" center use-label-slot wx:for="{{content.books}}" wx:for-item="item" wx:key="id">
+            <view slot="icon" class="iconview">
+                <image class="icon" src="{{item.cover}}" />
+            </view>
+            <view slot="label">
+                <view class="name">{{item.name}}</view>
+                <view class="desc">{{item.desc}}</view>
+                <view class="author">{{item.author}}</view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+</view>
+<view wx:elif="{{item.id===7}}">
+    <van-cell-group>
+        <van-cell class="ts" url="/pages/listaa/listaa?id={{item.id}}" center use-label-slot wx:for="{{content.books}}" wx:for-item="item" wx:key="id">
+            <view slot="icon" class="iconview">
+                <image class="icon" src="{{item.cover}}" />
+            </view>
+            <view slot="label">
+                <view class="name">{{item.name}}</view>
+                <view class="desc">{{item.desc}}</view>
+                <view class="author">{{item.author}}</view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+</view>
+<view wx:else>
+    <van-cell-group>
+        <van-cell class="ts" url="/pages/listaa/listaa?id={{item.id}}" center use-label-slot wx:for="{{content.books}}" wx:for-item="item" wx:key="id">
+            <view slot="icon" class="iconview">
+                <image class="icon" src="{{item.cover}}" />
+            </view>
+            <view slot="label">
+                <view class="name">{{item.name}}</view>
+                <view class="desc">{{item.desc}}</view>
+                <view class="author">{{item.author}}</view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+</view> -->

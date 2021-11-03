@@ -1,0 +1,46 @@
+.cont {
+    .tabs {
+        display: flex;
+        .item {
+            flex: 1;
+            text-align: center;
+            line-height: 90rpx;
+            &.active{
+                border-bottom: 2px solid red;
+            }
+        }
+    }
+
+
+    .tuijian {
+        display   : flex;
+        margin-top: 10px;
+
+        .jianjie {
+            //  padding: 10px;
+            flex-direction: column;
+            display       : flex;
+            height        : 145px;
+            flex          : 5;
+
+            h5 {
+                flex     : 3;
+                font-size: 14px;
+                color    : #888;
+                overflow : hidden;
+                padding  : 0;
+            }
+
+            h4 {
+                flex: 1;
+            }
+        }
+
+        image {
+            flex: 2;
+
+        }
+
+    }
+
+}

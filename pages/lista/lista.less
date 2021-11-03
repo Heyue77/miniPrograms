@@ -1,0 +1,69 @@
+.tuijian {
+    display   : flex;
+    margin-top: 10px;
+
+    .jianjie {
+        //  padding: 10px;
+        flex-direction: column;
+        display       : flex;
+        height        : 145px;
+        flex          : 5;
+
+        h5 {
+            flex     : 3;
+            font-size: 14px;
+            color    : #888;
+            overflow : hidden;
+            padding  : 0;
+        }
+
+        h4 {
+            flex: 1;
+        }
+    }
+
+    image {
+        flex: 2;
+
+    }
+
+}
+
+.ts {
+
+    display: flex;
+
+    .iconview {
+        // flex:2;
+        margin-right: 10rpx;
+
+        .icon {
+            width : 240rpx;
+            height: 240rpx;
+
+        }
+    }
+
+    .label {
+        flex: 5;
+
+        display: flex;
+        flex-direction: column;
+        .name {
+            flex: 1;
+        }
+
+        .desc {
+            flex     : 3;
+            color    : #888;
+            font-size: 36rpx;
+            overflow : hidden;
+        }
+
+        .author {
+            flex     : 1;
+           font-size: 48rpx;
+            color:#333;
+        }
+    }
+}

@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "van-search": "../../components/vant/search/index"
+    "van-search": "../../components/vant/search/index",
+    "van-cell-group":"../../components/vant/cell-group/index",
+    "van-cell":"../../components/vant/cell/index"
   }
 }
