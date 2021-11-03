@@ -13,8 +13,14 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/bookstore/bookstore",
-          "pathName": "pages/bookstore/bookstore",
+          "name": "pages/rank/rank",
+          "pathName": "pages/rank/rank",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/classify/classify",
+          "pathName": "pages/classify/classify",
           "query": "",
           "scene": null
         }

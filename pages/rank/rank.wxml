@@ -1,0 +1,100 @@
+<!-- 榜单一级页面 -->
+<van-tabs active="{{ active }}" bind:change="onChange" title-active-color="#9f5ad8">
+    <van-tab title="男生">
+    <!-- 男频热榜 -->
+        <view class="contentbox">
+            <view class="ranktitle">
+                <text class="iconfont icon-huoyan"></text>
+                {{module[0].name}}
+            </view>
+            <view class="rankcont">
+                <view class="contitem" wx:for="{{module[0].itemList.bookList}}" wx:key="bookId" wx:for-item="item">
+                    <navigator url="" hover-class="none" open-type="navigate">
+                        <image class="bookimg" src="{{item.cover}}" mode="widthFix">
+                            <!-- <text class="iconfont icon-daochu1024-26"></text> -->
+                        </image>
+                        <view class="bookname">{{item.name}}</view>
+                        <view class="readnum">
+                            <text class="iconfont icon-huoyan"></text>
+                            {{item.readNumText}}
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+            <navigator class="more" url="">查看完整榜单>>></navigator>
+        </view>
+        <!-- 男频人气榜 -->
+         <view class="contentbox">
+            <view class="ranktitle">
+                <text class="iconfont icon-renqizhi"></text>
+                {{module[2].name}}
+            </view>
+            <view class="rankcont">
+                <view class="contitem" wx:for="{{module[2].itemList}}" wx:key="bookId" wx:for-item="item">
+                    <navigator url="" hover-class="none" open-type="navigate">
+                        <image class="bookimg" src="{{item.cover}}" mode="widthFix">
+                            <!-- <text class="iconfont icon-daochu1024-26"></text> -->
+                        </image>
+                        <view class="bookname">{{item.name}}</view>
+                        <view class="readnum score">
+                            <text class="iconfont icon-renqizhi"></text>
+                            {{item.score}}分
+                            {{item.status}}
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+            <navigator class="more" url="">查看完整榜单>>></navigator>
+        </view>
+    </van-tab>
+    <van-tab title="女生">
+    <!-- 女频热销 -->
+         <view class="contentbox">
+            <view class="ranktitle femalecolor">
+                <text class="iconfont icon-huoyan"></text>
+                {{module[1].name}}
+            </view>
+            <view class="rankcont">
+                <view class="contitem" wx:for="{{module[1].itemList.bookList}}" wx:key="bookId" wx:for-item="item">
+                    <navigator url="" hover-class="none" open-type="navigate">
+                        <image class="bookimg" src="{{item.cover}}" mode="widthFix">
+                            <!-- <text class="iconfont icon-daochu1024-26"></text> -->
+                        </image>
+                        <view class="bookname">{{item.name}}</view>
+                        <view class="readnum">
+                            <text class="iconfont icon-huoyan"></text>
+                            {{item.readNumText}}
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+            <navigator class="more" url="">查看完整榜单>>></navigator>
+        </view>
+        <!-- 女频人气榜 -->
+         <view class="contentbox">
+            <view class="ranktitle femalecolor">
+                <text class="iconfont icon-renqizhi feico"></text>
+                {{module[3].name}}
+            </view>
+            <view class="rankcont">
+                <view class="contitem" wx:for="{{module[3].itemList}}" wx:key="bookId" wx:for-item="item">
+                    <navigator url="" hover-class="none" open-type="navigate">
+                        <image class="bookimg" src="{{item.cover}}" mode="widthFix">
+                            <!-- <text class="iconfont icon-daochu1024-26"></text> -->
+                        </image>
+                        <view class="bookname">{{item.name}}</view>
+                        <view class="readnum score feico" style="color:#9e658b">
+                            <text class="iconfont icon-renqizhi feico"></text>
+                            {{item.score}}分
+                            {{item.status}}
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+            <navigator class="more" url="">查看完整榜单>>></navigator>
+        </view>
+    </van-tab>
+</van-tabs>
+<!-- https://ccdn.andreader.com/sharp/H5BookStore/act.ashx?gender=0&actionid=9008
+https://ccdn.andreader.com/sharp/H5BookStore/act.ashx?gender=0&actionid=9004&id=2&type=3&take=20&pageIndex=1&name=%25E5%25A5%25B3%25E9%25A2%2591%25E4%25BA%25BA%25E6%25B0%2594%25E6%25A6%259C&channel=1
+https://ccdn.andreader.com/sharp/H5BookStore/act.ashx?&gender=0&actionid=9004&id=0&type=3&take=20&pageIndex=1&name=%25E5%25A5%25B3%25E9%25A2%2591%25E7%2583%25AD%25E9%2594%2580%25E6%25A6%259C&channel=1 -->

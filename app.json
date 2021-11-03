@@ -7,7 +7,10 @@
     "pages/bookinfo/bookinfo",
     "pages/bookpage/bookpage",
     "pages/classify/classify",
-    "pages/list/list"
+    "pages/classifyinfo/classifyinfo",
+    "pages/list/list",
+    "pages/rank/rank",
+    "pages/rankmore/rankmore"
   ],
   "window":{
     "backgroundTextStyle":"light",

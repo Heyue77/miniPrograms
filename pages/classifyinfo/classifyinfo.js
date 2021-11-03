@@ -1,30 +1,23 @@
-// pages/classify/classify.js
-import { requestGet, classifyURL } from "../../utils/reqeust";
+// pages/classifyinfo/classifyinfo.js
 Page({
-	/**
-	 * 页面的初始数据
-	 */
-	data: {
-		active: 1,
-		male: [],
-		female: []
-	},
-	
 
-	/**
-	 * 生命周期函数--监听页面加载
-	 */
+	data: {
+    title:''
+  },
+ 
 	onLoad: function (options) {
-		this.getClassifyData();
+		console.log(options);
+    this.setData({
+       title: options.title
+    })
+		
 	},
-	async getClassifyData() {
-		const result = await requestGet(classifyURL);
-		console.log(result);
-		this.setData({
-			male: result.male,
-			female: result.female
-		});
-	},
+  onClickLeft() {
+    wx.navigateTo({
+      url: '/pages/classify/classify'
+    })
+  },
+ 
 
 	/**
 	 * 生命周期函数--监听页面初次渲染完成

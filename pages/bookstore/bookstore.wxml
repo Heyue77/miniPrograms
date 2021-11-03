@@ -21,7 +21,7 @@
             畅销短篇
         </view>
         <view class="more">
-            <navigator url="/pages/list/list?id={{shortpid}}" hover-class="none">
+            <navigator url="/pages/list/list" hover-class="none">
                 更多
                 <text class="iconfont icon-changyong_fanhui"></text>
             </navigator>
@@ -31,10 +31,10 @@
         <view class="shortpitem" wx:for="{{shortps}}" wx:for-item="item" wx:key="id">
             <navigator url="/pages/bookinfo/bookinfo?id={{item._id}}" hover-class="none">
                 <view class="itemimg">
-                    <image src="{{item.cover}}" mode="widthFix"></image>
+                    <image src="{{item.Cover}}" mode="widthFix"></image>
                 </view>
-                <view class="">{{item.title}}</view>
-                <view class="author">{{item.author}}</view>
+                <view class="">{{item.Name}}</view>
+                <view class="author">{{item.Author}}</view>
             </navigator>
         </view>
     </view>
@@ -47,7 +47,7 @@
             人气佳作
         </view>
         <view class="more">
-            <navigator url="/pages/list/list?id={{popid}}" hover-class="none">
+            <navigator url="/pages/list/list" hover-class="none">
                 更多
                 <text class="iconfont icon-changyong_fanhui"></text>
             </navigator>
@@ -57,10 +57,10 @@
         <view class="shortpitem" wx:for="{{populars}}" wx:for-item="item" wx:key="id">
             <navigator url="/pages/bookinfo/bookinfo?id={{item._id}}" hover-class="none">
                 <view class="itemimg">
-                    <image src="{{item.cover}}" mode="widthFix"></image>
+                    <image src="{{item.Cover}}" mode="widthFix"></image>
                 </view>
-                <view class="">{{item.title}}</view>
-                <view class="author">{{item.author}}</view>
+                <view class="">{{item.Name}}</view>
+                <view class="author">{{item.Author}}</view>
             </navigator>
         </view>
     </view>
@@ -73,26 +73,26 @@
             猜你喜欢
         </view>
         <view class="more">
-            <navigator url="/pages/list/list?id={{likeid}}" hover-class="none">
+            <navigator url="/pages/list/list" hover-class="none">
                 更多
                 <text class="iconfont icon-changyong_fanhui"></text>
             </navigator>
         </view>
     </view>
     <van-cell-group>
-        <van-cell  url="/pages/bookinfo/bookinfo?id={{item._id}}" center use-label-slot wx:for="{{likelist}}" wx:for-item="item" wx:key="id" title="{{item.title}}">
+        <van-cell  url="/pages/bookinfo/bookinfo?id={{item._id}}" center use-label-slot wx:for="{{likelist}}" wx:for-item="item" wx:key="id" title="{{item.Name}}">
             <view slot="icon" class="iconview">
-                <image class="icon" src="{{item.cover}}" />
+                <image class="icon" src="{{item.Cover}}" />
             </view>
             <view slot="label">
-                <view class="shortinfo">{{item.shortIntro}}</view>
+                <view class="shortinfo">{{item.Introduction}}</view>
                 <view class="auty">
                     <view class="author">
                         <text class="iconfont icon-fl-renyuan"></text>
-                        {{item.author}}
+                        {{item.Author}}
                     </view>
-                    <view class="type">{{item.majorCate}}</view>
-                    <view class="type">{{item.rating.score}}分</view>
+                    <!-- <view class="type">{{item.majorCate}}</view> -->
+                    <view class="type">{{item.ReadNumText}}</view>
                 </view>
             </view>
         </van-cell>

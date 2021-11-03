@@ -1,0 +1,80 @@
+.van-tabs__scroll--line {
+  box-sizing: initial;
+  height: calc(100% + 12px) !important;
+}
+.van-tabs__wrap {
+  height: var(--tabs-line-height, 24px);
+  width: 200rpx !important;
+  background-color: transparent !important;
+}
+.van-tabs__scroll {
+  background-color: transparent !important;
+}
+.van-tab--active {
+  font-size: 20px !important;
+}
+.van-tabs__line {
+  background-color: #9f5ad8 !important;
+  width: 30rpx !important;
+}
+.contentbox {
+  width: 90%;
+  margin: 20rpx auto;
+  padding-bottom: 20rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+.contentbox .femalecolor {
+  background-color: rgba(235, 195, 221) !important;
+}
+.contentbox .feico {
+  color: #9e658b !important;
+}
+.contentbox .ranktitle {
+  padding: 10rpx 0;
+  text-align: center;
+  background-color: rgba(201, 195, 236, 0.6);
+  border-radius: 0 0 50% 50%;
+}
+.contentbox .ranktitle .icon-renqizhi {
+  color: blue;
+}
+.contentbox .ranktitle .icon-huoyan {
+  color: red;
+}
+.contentbox .rankcont {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20rpx;
+}
+.contentbox .rankcont .contitem {
+  width: 50%;
+  text-align: center;
+}
+.contentbox .rankcont .contitem .bookname {
+  font-size: 16px;
+  color: #635d5d;
+  padding: 20rpx 0;
+}
+.contentbox .rankcont .contitem image {
+  width: 40%;
+}
+.contentbox .rankcont .contitem:first-of-type {
+  width: 100%;
+  margin: 50rpx;
+}
+.contentbox .rankcont .contitem .readnum {
+  font-size: 12px;
+  color: red;
+}
+.contentbox .rankcont .contitem .score {
+  color: #4545f3 !important;
+}
+.contentbox .more {
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+  margin: 20rpx 0;
+}

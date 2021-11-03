@@ -47,7 +47,7 @@
     "useCompilerPlugins": false
   },
   "compileType": "miniprogram",
-  "libVersion": "2.19.4",
+  "libVersion": "2.19.2",
   "appid": "wx97e91870b47a3c64",
   "projectname": "richRead",
   "debugOptions": {

@@ -1,12 +1,12 @@
 /**app.wxss**/
 page{
-  background-color: #e3dae9;
+  background-color: rgb(227, 218, 233);
 }
 @font-face {
   font-family: 'iconfont';  /* Project id 2895082 */
-  src: url('//at.alicdn.com/t/font_2895082_u1vppff0hci.woff2?t=1635748445043') format('woff2'),
-       url('//at.alicdn.com/t/font_2895082_u1vppff0hci.woff?t=1635748445043') format('woff'),
-       url('//at.alicdn.com/t/font_2895082_u1vppff0hci.ttf?t=1635748445043') format('truetype');
+  src: url('//at.alicdn.com/t/font_2895082_bdvwgo1dqnk.woff2?t=1635855991150') format('woff2'),
+       url('//at.alicdn.com/t/font_2895082_bdvwgo1dqnk.woff?t=1635855991150') format('woff'),
+       url('//at.alicdn.com/t/font_2895082_bdvwgo1dqnk.ttf?t=1635855991150') format('truetype');
 }
 
 .iconfont {
@@ -15,6 +15,54 @@ page{
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-renqi1:before {
+  content: "\e601";
+}
+
+.icon-renqizhi:before {
+  content: "\e61d";
+}
+
+.icon-renqi2:before {
+  content: "\e943";
+}
+
+.icon-jiangpai-copy:before {
+  content: "\e600";
+}
+
+.icon-dier:before {
+  content: "\e637";
+}
+
+.icon-disan:before {
+  content: "\e633";
+}
+
+.icon-diyi:before {
+  content: "\e6e9";
+}
+
+.icon-daochu1024-26:before {
+  content: "\e617";
+}
+
+.icon-daochu1024-27:before {
+  content: "\e618";
+}
+
+.icon-daochu1024-28:before {
+  content: "\e619";
+}
+
+.icon-huoyan:before {
+  content: "\e63e";
+}
+
+.icon-renqi:before {
+  content: "\e609";
 }
 
 .icon-fl-renyuan:before {

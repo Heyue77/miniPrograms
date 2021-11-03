@@ -31,6 +31,18 @@ export function requestGet(url, data) {
 	});
 }
 
-// 首页接口
+// 轮播图接口
 export var bannerURL = "https://b.zhuishushenqi.com/category/classifylist?node=bf0a65255a5b4c138052dca8ef065753"; //GET请求
-export var booklistURL="https://b.zhuishushenqi.com/category/booklist?node="  //GET请求 ?id
+// 首页接口
+export var homeURL="https://ccdn.andreader.com/sharp/H5BookStore/act.ashx?gender=0&actionid=9062" //get 请求
+// 更多书籍接口
+export var listURL="https://ccdn.andreader.com/sharp/H5BookStore/act.ashx?actionid=9004&id=2&type=3&take=20&pageIndex=5" //get 请求
+//榜单接口
+export var rankURL="https://ccdn.andreader.com/sharp/H5BookStore/act.ashx?actionid=9008"
+// base接口
+export var bsseURL="https://ccdn.andreader.com/sharp/H5BookStore/act.ashx?"
+
+
+
+//分类页面接口
+export var classifyURL="https://b.zhuishushenqi.com/category/cats"  //GET请求 

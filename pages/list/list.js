@@ -1,5 +1,5 @@
 // pages/list/list.js
-import { requestGet, booklistURL } from "../../utils/reqeust";
+import { requestGet, homeURL,listURL } from "../../utils/reqeust";
 Page({
 	/**
 	 * 页面的初始数据
@@ -11,15 +11,15 @@ Page({
 
 	onLoad: function (options) {
 		// console.log(options);
-		this.id = options.id;
+		// this.id = options.id;
 		this.getBooklist();
 	},
 	async getBooklist() {
-		const result = await requestGet(booklistURL + this.id);
-		// console.log(result);
+		const result = await requestGet(listURL);
+		console.log(result.ResponseObject[0].module.itemList);
 		this.setData({
-			resultlist: result.book,
-			bookid: result.book._id
+			resultlist: result.ResponseObject[0].module.itemList,
+			// bookid: result.ranking.books._id
 		});
 	},
 

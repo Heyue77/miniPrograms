@@ -1,5 +1,5 @@
 // pages/bookstore/bookstore.js
-import {requestGet,bannerURL} from "../../utils/reqeust"
+import {requestGet,bannerURL, homeURL} from "../../utils/reqeust"
 Page({
 
   /**
@@ -18,7 +18,7 @@ Page({
       {
         id:2,
         name:"排行榜",
-        url:"/pages/list/list",
+        url:"/pages/rank/rank",
         icon:"/assets/imgs/排行榜.png",
         link:"navigateTo"
       },
@@ -45,14 +45,16 @@ Page({
   },
   async getBannerData() {
     const result = await requestGet(bannerURL);
+    const resulth=await requestGet(homeURL);
+    console.log(resulth.ResponseObject[0].Cards[2].Data)
     this.setData({
       banner: result.data.spread[0].advs,
-      shortps:result.data.nodes[0].books.slice(0,2),
-      populars:result.data.nodes[1].books.slice(0,4),
-      likelist:result.data.nodes[2].books,
-      shortpid: result.data.nodes[0]._id,
-      popid:result.data.nodes[1]._id,
-      likeid: result.data.nodes[2]._id
+      shortps:resulth.ResponseObject[0].Cards[2].Data,
+      populars:resulth.ResponseObject[0].Cards[3].Data,
+      likelist:[...resulth.ResponseObject[0].Cards[1].Data,...resulth.ResponseObject[0].Cards[4].Data],
+      // shortpid: result.data.nodes[0]._id,
+      // popid:result.data.nodes[1]._id,
+      // likeid: result.data.nodes[2]._id
     });
   },
 
