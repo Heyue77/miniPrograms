@@ -40,9 +40,10 @@ export var listURL="https://ccdn.andreader.com/sharp/H5BookStore/act.ashx?action
 //榜单接口
 export var rankURL="https://ccdn.andreader.com/sharp/H5BookStore/act.ashx?actionid=9008"
 // base接口
-export var bsseURL="https://ccdn.andreader.com/sharp/H5BookStore/act.ashx?"
-
+export var baseURL="https://ccdn.andreader.com/sharp/H5BookStore/act.ashx?"
+// 分类接口
+export var classifyURL="https://ccdn.andreader.com/sharp/H5BookStore/act.ashx?actionid=9009"
 
 
 //分类页面接口
-export var classifyURL="https://b.zhuishushenqi.com/category/cats"  //GET请求 
+// export var classifyURL="https://b.zhuishushenqi.com/category/cats"  //GET请求 

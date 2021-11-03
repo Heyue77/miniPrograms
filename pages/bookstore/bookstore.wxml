@@ -18,7 +18,7 @@
     <view class="title">
         <view class="titleTag">
             <text class="iconfont icon-jinpai"></text>
-            畅销短篇
+            今日力荐
         </view>
         <view class="more">
             <navigator url="/pages/list/list" hover-class="none">

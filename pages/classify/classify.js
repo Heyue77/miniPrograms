@@ -4,16 +4,28 @@ Page({
 	/**
 	 * 页面的初始数据
 	 */
-	data: {
-		active: 1,
-		male: [],
-		female: []
-	},
-	
 
-	/**
-	 * 生命周期函数--监听页面加载
-	 */
+	data: {
+		active: 0,
+		currentTab: 0,
+		male:[],
+		female:[]
+	},
+	switchNav: function (e) {
+		var page = this;
+		var id = e.target.id;
+		if (this.data.currentTab == id) {
+			return false;
+		} else {
+			page.setData({
+				currentTab: id
+			});
+		}
+		page.setData({
+			active: id
+		});
+	},
+
 	onLoad: function (options) {
 		this.getClassifyData();
 	},
@@ -21,8 +33,8 @@ Page({
 		const result = await requestGet(classifyURL);
 		console.log(result);
 		this.setData({
-			male: result.male,
-			female: result.female
+			male: result.ResponseObject[0].module[0].id=1?result.ResponseObject[0].module[0].itemList:result.ResponseObject[0].module[1].itemList,
+			female: result.ResponseObject[0].module[1].id=2?result.ResponseObject[0].module[1].itemList:result.ResponseObject[0].module[0].itemList
 		});
 	},
 

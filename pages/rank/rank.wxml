@@ -9,7 +9,7 @@
             </view>
             <view class="rankcont">
                 <view class="contitem" wx:for="{{module[0].itemList.bookList}}" wx:key="bookId" wx:for-item="item">
-                    <navigator url="" hover-class="none" open-type="navigate">
+                    <navigator url="/pages/bookinfo/bookinfo?id={{item.bookId}}" hover-class="none" open-type="navigate">
                         <image class="bookimg" src="{{item.cover}}" mode="widthFix">
                             <!-- <text class="iconfont icon-daochu1024-26"></text> -->
                         </image>
@@ -21,7 +21,7 @@
                     </navigator>
                 </view>
             </view>
-            <navigator class="more" url="">查看完整榜单>>></navigator>
+            <navigator class="more" url="/pages/rankmore/rankmore?{{malehoturl}}&title={{module[0].name}}">查看完整榜单>>></navigator>
         </view>
         <!-- 男频人气榜 -->
          <view class="contentbox">
@@ -31,7 +31,7 @@
             </view>
             <view class="rankcont">
                 <view class="contitem" wx:for="{{module[2].itemList}}" wx:key="bookId" wx:for-item="item">
-                    <navigator url="" hover-class="none" open-type="navigate">
+                    <navigator url="/pages/bookinfo/bookinfo?id={{item.bookId}}" hover-class="none" open-type="navigate">
                         <image class="bookimg" src="{{item.cover}}" mode="widthFix">
                             <!-- <text class="iconfont icon-daochu1024-26"></text> -->
                         </image>
@@ -44,7 +44,7 @@
                     </navigator>
                 </view>
             </view>
-            <navigator class="more" url="">查看完整榜单>>></navigator>
+            <navigator class="more" url="/pages/rankmore/rankmore?{{malepopurl}}&title={{module[2].name}}">查看完整榜单>>></navigator>
         </view>
     </van-tab>
     <van-tab title="女生">
@@ -56,7 +56,7 @@
             </view>
             <view class="rankcont">
                 <view class="contitem" wx:for="{{module[1].itemList.bookList}}" wx:key="bookId" wx:for-item="item">
-                    <navigator url="" hover-class="none" open-type="navigate">
+                    <navigator url="/pages/bookinfo/bookinfo?id={{item.bookId}}" hover-class="none" open-type="navigate">
                         <image class="bookimg" src="{{item.cover}}" mode="widthFix">
                             <!-- <text class="iconfont icon-daochu1024-26"></text> -->
                         </image>
@@ -68,7 +68,7 @@
                     </navigator>
                 </view>
             </view>
-            <navigator class="more" url="">查看完整榜单>>></navigator>
+            <navigator class="more" url="/pages/rankmore/rankmore?{{femalehoturl}}&title={{module[1].name}}">查看完整榜单>>></navigator>
         </view>
         <!-- 女频人气榜 -->
          <view class="contentbox">
@@ -78,7 +78,7 @@
             </view>
             <view class="rankcont">
                 <view class="contitem" wx:for="{{module[3].itemList}}" wx:key="bookId" wx:for-item="item">
-                    <navigator url="" hover-class="none" open-type="navigate">
+                    <navigator url="/pages/bookinfo/bookinfo?id={{item.bookId}}" hover-class="none" open-type="navigate">
                         <image class="bookimg" src="{{item.cover}}" mode="widthFix">
                             <!-- <text class="iconfont icon-daochu1024-26"></text> -->
                         </image>
@@ -91,7 +91,7 @@
                     </navigator>
                 </view>
             </view>
-            <navigator class="more" url="">查看完整榜单>>></navigator>
+            <navigator class="more" url="/pages/rankmore/rankmore?{{femalepopurl}}&title={{module[3].name}}">查看完整榜单>>></navigator>
         </view>
     </van-tab>
 </van-tabs>

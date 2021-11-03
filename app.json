@@ -7,7 +7,7 @@
     "pages/bookinfo/bookinfo",
     "pages/bookpage/bookpage",
     "pages/classify/classify",
-    "pages/classifyinfo/classifyinfo",
+    "pages/classifyinfo/more.html",
     "pages/list/list",
     "pages/rank/rank",
     "pages/rankmore/rankmore"

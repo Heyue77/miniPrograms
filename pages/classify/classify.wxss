@@ -1,47 +1,69 @@
 page {
   background-color: rgba(255, 255, 255, 0.3);
 }
-.van-tabs__scroll--line {
-  box-sizing: initial;
-  height: calc(100% + 12px) !important;
+.productNav {
+  display: flex;
+  flex-direction: row;
+  font-family: "Microsoft YaHei";
 }
-.van-tabs__wrap {
-  height: var(--tabs-line-height, 24px);
-  width: 200rpx !important;
-  background-color: transparent !important;
+.left {
+  width: 25%;
+  font-size: 30rpx;
+  background-color: #fff;
 }
-.van-tabs__scroll {
-  background-color: transparent !important;
+.left view {
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
 }
-.van-tab--active {
-  font-size: 20px !important;
+.selected {
+  background-color: #f4f4f4;
+  border-left: 2px solid #c74772;
+  font-weight: bold;
+  color: #c74772;
 }
-.van-tabs__line {
-  background-color: #9f5ad8 !important;
-  width: 30rpx !important;
+.normal {
+  background-color: #fff;
 }
-.contentbox {
-  width: 95%;
-  margin: 20rpx auto;
+.right {
+  width: 75%;
+  margin: 0;
+}
+swiper {
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+.type {
+  background-color: #f4f4f4;
+}
+.swpitem {
   display: flex;
   flex-wrap: wrap;
 }
-.contentbox .boxitem {
-  width: 40%;
-  background-color: rgba(235, 195, 221, 0.3);
-  border-radius: 10rpx;
-  margin: 20rpx;
-  padding: 10rpx;
-}
-.contentbox .boxitem .onetitle {
-  font-size: 20px;
-  margin: 10rpx 0;
-}
-.contentbox .boxitem .twotitle {
-  color: #aaa;
+.swpitem .rankitem {
+  width: 44%;
+  background-color: #fff;
+  height: 130rpx;
+  line-height: 130rpx;
+  text-align: center;
+  margin: 10rpx;
+  padding: 5rpx;
+  border-radius: 30rpx;
+  vertical-align: center;
   font-size: 14px;
-  margin: 20rpx 0;
+  border: 1px solid #e9bfe3;
+  overflow: hidden;
+  display: flex;
 }
-.contentbox .mancolor {
-  background-color: rgba(201, 195, 236, 0.3);
+.swpitem .rankitem .title {
+  flex: 2;
+}
+.swpitem .rankitem image {
+  flex: 1;
+  width: 70rpx !important;
+  height: 150rpx !important;
+  vertical-align: center;
+}
+scroll-view {
+  height: 1200rpx;
 }

@@ -1,7 +1,6 @@
-<!--pages/rankmore/rankmore.wxml-->
 <van-nav-bar title="{{title}}"  left-arrow bind:click-left="onClickLeft"  safe-area-inset-top="{{false}}"/>
 <van-cell-group>
-    <van-cell url="/pages/bookinfo/bookinfo?id={{item.bookId}}" center use-label-slot wx:for="{{resultlist}}" wx:for-item="item" wx:key="id" title="{{item.name}}">
+    <van-cell url="/pages/bookinfo/bookinfo?id={{item.bookId}}" center use-label-slot wx:for="{{booklist}}" wx:for-item="item" wx:key="id" title="{{item.name}}">
         <view slot="icon" class="iconview">
             <image class="icon" src="{{item.cover}}" />
         </view>

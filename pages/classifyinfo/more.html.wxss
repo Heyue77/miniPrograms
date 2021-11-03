@@ -1,4 +1,4 @@
-/* pages/rankmore/rankmore.wxss */
+/* pages/classifyinfo/classifyinfo.wxss */
 .van-cell .iconview {
 	margin-right: 10rpx;
 }

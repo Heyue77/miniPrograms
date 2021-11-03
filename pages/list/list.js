@@ -19,7 +19,7 @@ Page({
 		console.log(result.ResponseObject[0].module.itemList);
 		this.setData({
 			resultlist: result.ResponseObject[0].module.itemList,
-			// bookid: result.ranking.books._id
+
 		});
 	},
 

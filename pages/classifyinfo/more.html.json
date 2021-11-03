@@ -1,8 +1,8 @@
 {
   "usingComponents": {
     "van-nav-bar": "../../components/vant/nav-bar/index",
-    "van-tab": "../../components/vant/tab/index",
-    "van-tabs": "../../components/vant/tabs/index"
+    "van-cell": "../../components/vant/cell/index",
+		"van-cell-group": "../../components/vant/cell-group/index"
   },
   "navigationBarTitleText": "分类"
 }

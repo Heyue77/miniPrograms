@@ -1,29 +1,38 @@
 <!-- 分类页面 -->
-<van-tabs active="{{ active }}" bind:change="onChange" title-active-color="#9f5ad8">
-    <van-tab title="男生">
-        <view class="contentbox">
-            <view class="boxitem mancolor" wx:for="{{male}}" wx:for-item="item" wx:key="*this">
-                <navigator class="" target="" url="/pages/classifyinfo/classifyinfo?title={{item.major}}&mins={{item.mins}}" hover-class="none" open-type="navigate">
-                    <view class="onetitle">{{item.major}}</view>
-                    <view class="twotitle">
-                        <text>{{item.mins[0]}}</text>
-                        <text>{{item.mins[1]?"、":""}}{{item.mins[1]}}</text>
-                    </view>
-                </navigator>
-            </view>
+<view class='productNav'>
+    <!-- 左侧 -->
+    <view class='left'>
+        <view class="{{active==0?'selected':'normal'}}" id="0" bindtap='switchNav'>男生</view>
+        <view class="{{active==1?'selected':'normal'}}" id="1" bindtap='switchNav'>女生</view>
+    </view>
+    <!-- 右侧 -->
+    <view class='right'>
+        <view class='type'>
+            <!-- current:当前所在滑块的 index -->
+            <!-- vertical:滑动方向是否为纵向 -->
+            <swiper current='{{currentTab}}' vertical='{{true}}'>
+                <!-- catchtouchmove 阻止弹窗后滚动穿透 -->
+                <swiper-item id="0" catchtouchmove="false">
+                    <scroll-view scroll-y="{{true}}">
+                        <view class="swpitem">
+                            <navigator url="/pages/classifyinfo/{{item.url}}&title={{item.name}}" hover-class="none" class="rankitem" wx:for="{{male}}" wx:for-item="item" wx:key="id">
+                                <text class="title">{{item.name}}</text>
+                                <image class="img" src="{{item.cover}}" mode="widthFix" />
+                            </navigator>
+                        </view>
+                    </scroll-view>
+                </swiper-item>
+                <swiper-item id="1" catchtouchmove="false">
+                    <scroll-view scroll-y="{{true}}">
+                        <view class="swpitem">
+                            <navigator url="/pages/classifyinfo/{{item.url}}&title={{item.name}}" hover-class="none" class="rankitem" wx:for="{{female}}" wx:for-item="item" wx:key="id">
+                                <text class="title">{{item.name}}</text>
+                                <image class="img" src="{{item.cover}}" mode="widthFix" />
+                            </navigator>
+                        </view>
+                    </scroll-view>
+                </swiper-item>
+            </swiper>
         </view>
-    </van-tab>
-    <van-tab title="女生">
-        <view class="contentbox">
-            <view bindtap="toclassinfo" class="boxitem" wx:for="{{female}}" wx:for-item="item" wx:key="*this">
-                <navigator class="" target="" url="/pages/classifyinfo/classifyinfo?title={{item.major}}&mins={{item.mins}}" hover-class="none" open-type="navigate">
-                    <view class="onetitle">{{item.major}}</view>
-                    <view class="twotitle">
-                        <text>{{item.mins[0]}}</text>
-                        <text>{{item.mins[1]?"、":""}}{{item.mins[1]}}</text>
-                    </view>
-                </navigator>
-            </view>
-        </view>
-    </van-tab>
-</van-tabs>
+    </view>
+</view>
