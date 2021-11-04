@@ -13,12 +13,15 @@ Page({
         this.section = options.sections
         this.cover = options.cover
         console.log(this.section)
+
+
         this.getResourceData()
         console.log(this.data)
             // console.log(that)
 
     },
     async getResourceData() {
+
         // const result = await requestGet("https://m.lrts.me/ajax/getPlayPath?entityId=36816&entityType=3&opType=1&sections=%5B1%5D&type=0")
         const result = await requestGet(`${getPlayPathURL}`, {
             entityId: this.bookId,
@@ -30,6 +33,7 @@ Page({
             resource: result,
             cover: this.cover,
         })
+
     },
     onReady: function(e) {
         // 使用 wx.createAudioContext 获取 audio 上下文 context

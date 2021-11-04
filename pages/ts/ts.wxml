@@ -5,7 +5,8 @@
 <view class="container">
   <view wx:for="{{resource.list}}" wx:for-item="item" wx:key="id">
   <text class="nr">第{{item.section}}章</text>
-    <audio src="{{item.path}}}" id="myAudio"></audio>
+    <audio src="{{item.path}}"  id="myAudio"></audio>
+      
   </view>
   <view class="bf">
     <button bindtap="audioPlay">
