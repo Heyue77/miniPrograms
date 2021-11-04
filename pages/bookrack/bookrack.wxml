@@ -1,2 +1,61 @@
 <!--pages/bookrack/bookrack.wxml-->
-<text>pages/bookrack/bookrack.wxml</text>
+<view class="container">
+  <!-- <view wx:if="{{!bookShelfData.length}}" class='noBooks'>
+      主人还没收藏书籍哦，请去书城收藏吧！
+    </view> -->
+  <view class='bookrackContainer'>
+    <view class="titleview">
+      <view class="titleTag">
+        我的书架
+      </view>
+      <!-- <view class="go">
+         管理 
+      </view> -->
+      <view class="go">
+        全选
+        <checkbox class="all" bindtap="checkAll" checked="{{isAll}}">
+        </checkbox>
+      </view>
+    </view>
+    <van-cell-group>
+      <checkbox-group bindchange="chbChange">
+
+        <!-- <view wx:for="{{bookracklist}}" wx:for-item="item" wx:key="id" bindtap="chlik" datda-number="index">
+          <van-cell url="/pages/bookpage/bookpage?id={{id}}" id="van-cellClass" center use-label-slot title="{{item.name}}">
+            <view slot="icon" class="iconview">
+              <image class="icon" src="{{item.cover}}" />
+            </view>
+            <view slot="label" class="labelview">
+              <view class="author">
+                <text class="authorText">作者:</text>{{item.author}}
+              </view>
+              <view class='readNum'>
+                读到第{{item.readNum}}章
+              </view>
+            </view>
+            <checkbox catchtap="innerTap" value="{{item.name}}" checked="{{item.isCheck}}"></checkbox>
+          </van-cell>
+        </view> -->
+
+        <view wx:for="{{bookracklist}}" wx:for-item="item" wx:key="id" bindtap="chlik" datda-number="index">
+          <van-cell url="/pages/bookpage/bookpage?id={{id}}" id="van-cellClass" center use-label-slot title="{{item.name}}">
+            <view slot="icon" class="iconview">
+              <image class="icon" src="{{item.cover}}" />
+            </view>
+            <view slot="label" class="labelview">
+              <view class="author">
+                <text class="authorText">作者:</text>{{item.author}}
+              </view>
+              <view class='readNum'>
+                读到第{{item.readNum}}章
+              </view>
+            </view>
+            <checkbox catchtap="innerTap" value="{{item.name}}" checked="{{item.isCheck}}"></checkbox>
+          </van-cell>
+        </view>
+
+      </checkbox-group>
+    </van-cell-group>
+
+  </view>
+</view>

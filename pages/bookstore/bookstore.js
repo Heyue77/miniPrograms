@@ -36,8 +36,31 @@ Page({
     likelist:[],
     shortpid:null,
     popid:null,
-    likeid:null
+    likeid:null,
+    value:null
 
+  },
+  onChange(e) {
+    this.setData({
+      value: e.detail,
+    });
+  },
+  onSearch() {
+    console.log('搜索' + this.data.value);
+    wx.navigateTo({
+      url: `/pages/search/search?keyword=${this.data.value}`,
+      success: (result)=>{
+        
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
+    this.setData({
+      value:''
+    })
+  },
+  onClick() {
+    console.log('搜索' + this.data.value);
   },
 
   onLoad() {
@@ -46,15 +69,11 @@ Page({
   async getBannerData() {
     const result = await requestGet(bannerURL);
     const resulth=await requestGet(homeURL);
-    console.log(resulth.ResponseObject[0].Cards[2].Data)
     this.setData({
       banner: result.data.spread[0].advs,
       shortps:resulth.ResponseObject[0].Cards[2].Data,
       populars:resulth.ResponseObject[0].Cards[3].Data,
       likelist:[...resulth.ResponseObject[0].Cards[1].Data,...resulth.ResponseObject[0].Cards[4].Data],
-      // shortpid: result.data.nodes[0]._id,
-      // popid:result.data.nodes[1]._id,
-      // likeid: result.data.nodes[2]._id
     });
   },
 
@@ -97,9 +116,11 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-
-  },
+   onReachBottom: function () {
+		this.setData({
+			flag:true
+		})
+	},
 
   /**
    * 用户点击右上角分享

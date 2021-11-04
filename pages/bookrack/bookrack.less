@@ -1,0 +1,79 @@
+page{
+    background-color: #fff;
+  }
+
+.container{
+    .noBooks{
+        text-align: center;
+    }
+    .bookrackContainer{
+        .titleview{
+            display: flex;
+            height: 60rpx;
+            padding-top: 20rpx;
+            padding-bottom: 20rpx;
+            margin-left: 16px;
+            margin-right: 16px;
+            border-bottom: 1px solid rgb(245, 241, 241);
+            .titleTag{
+                flex: 1;
+                font-size: 20px;
+                line-height: 60rpx;
+                // margin-right: 90px;
+                border-bottom: 2px solid #d5a3c9;
+                image{
+                    width: 60rpx;
+                    height: 60rpx;
+                }
+
+            }
+            .go{
+                line-height: 60rpx;
+                // margin-right: 20rpx;
+                flex: 3;
+                text-align: right;
+                color:#d96ae0;
+                font-weight: 500;
+            }
+        }
+      
+        van-cell-group{
+            // display: flex;
+            van-cell{
+                // display:flex;
+                // border-bottom: rgb(230, 224, 224);
+                // checkbox{
+                //     flex: 1;
+                // }
+                .iconview{
+                    // flex:1;
+                    margin-right: 10rpx;
+                   .icon{
+                    border-radius: 10rpx;
+                    width: 120rpx;
+                    height: 170rpx;
+                   }
+                }
+                .labelview{
+                    // flex: 2;
+                color: rgb(95, 91, 91);
+                font-size: 12px;
+                // .title{
+                //     // flex: 1;
+                // }
+                .author{
+                    .authorText{
+                        margin-bottom: 20rpx;
+                        width: auto;
+                        background-color: #d5a3c9;
+                        border-radius: 5px;
+                   }
+                }
+                
+                }
+              
+              }
+        }
+       
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-search": "../../components/vant/search/index",
+    "van-loading": "../../components/vant/loading/index",
+		"van-skeleton": "../../components/vant/skeleton/index",
+		"van-toast": "../../components/vant/toast/index",
+    "van-cell": "../../components/vant/cell/index",
+		"van-cell-group": "../../components/vant/cell-group/index"
+  }
+}

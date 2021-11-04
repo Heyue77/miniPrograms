@@ -116,3 +116,6 @@
   color: #aaa;
   text-align: center;
 }
+.disnone {
+  display: none;
+}

@@ -1,0 +1,41 @@
+<!-- pages/search/search.wxml -->
+<van-search value="{{ value }}" shape="round" background="#e3dae9" placeholder="请输入搜索关键词" bind:change="onChange" bind:search="onSearch" />
+<view class="{{showtitle?'':'shownone'}}">{{value}}的相关作品</view>
+<van-cell-group>
+    <van-skeleton row="3" avatar title loading="{{ loading }}" avatar-shape="square" avatar-size="50px">
+        <van-cell url="/pages/bookinfo/bookinfo?id={{item.bookId}}" center use-label-slot wx:for="{{booklist}}" wx:for-item="item" wx:key="id">
+            <view slot="icon" class="iconview">
+                <image class="icon" src="{{item.cover}}" />
+            </view>
+            <view slot="title">
+                <text wx:for="{{item.name}}" wx:key="index" class="{{item == value ? 'searchHigh' : '' }}">{{item}}</text>   
+            </view>
+            <view slot="label">
+                <view class="shortinfo">
+                    <!-- <text wx:for="{{item.introduce}}" wx:key="{{index}}" class="{{item == value ? 'searchHigh' : '' }}">{{item}}</text> -->
+                    {{item.introduce}}
+                </view>
+                <view class="auty">
+                    <view class="author">
+                        <text class="iconfont icon-fl-renyuan"></text>
+                        <text wx:for="{{item.author}}" wx:key="index" class="{{item == value ? 'searchHigh' : '' }}">{{item}}</text>
+                        <!-- {{item.author}} -->
+                    </view>
+                    <view class="type">
+                        <!-- {{item.status}} -->
+                        <text wx:for="{{item.status}}" wx:key="{{index}}" class="{{item == value ? 'searchHigh' : '' }}">{{item}}</text>              
+                    </view>
+                    <view class="type">
+                     {{item.score}}分
+                        <!-- <text wx:for="{{item.score}}" wx:key="{{index}}" class="{{item == value ? 'searchHigh' : '' }}">
+                            {{item}}分
+                        </text> -->
+                    </view>
+                </view>
+            </view>
+        </van-cell>
+    </van-skeleton>
+</van-cell-group>
+<view class="loding">
+    <van-loading type="spinner" color="#fff" />
+</view>

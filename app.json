@@ -10,13 +10,17 @@
     "pages/classifyinfo/more.html",
     "pages/list/list",
     "pages/rank/rank",
-    "pages/rankmore/rankmore"
+    "pages/rankmore/rankmore",
+    "pages/search/search"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#d5a3c9",
     "navigationBarTitleText": "小众闲书",
     "navigationBarTextStyle":"black"
+   
+    
+    
   },
   "tabBar": {
     "color": "#666",

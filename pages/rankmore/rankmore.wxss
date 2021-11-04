@@ -4,7 +4,7 @@
 }
 .van-cell .iconview .icon {
 	width: 130rpx;
-	height: 130rpx;
+	height: 160rpx;
 }
 .van-cell .shortinfo {
 	text-overflow: -o-ellipsis-lastline;

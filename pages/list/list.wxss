@@ -4,7 +4,7 @@
 }
 .van-cell .iconview .icon {
 	width: 130rpx;
-	height: 130rpx;
+	height: 160rpx;
 }
 .van-cell .shortinfo {
 	text-overflow: -o-ellipsis-lastline;
@@ -37,4 +37,11 @@
 	font-size: 12px;
 	color: #aaa;
 	text-align: center;
+}
+.disnone{
+	display: none
+}
+.loding{
+	text-align: center;
+	margin: 0 auto;
 }

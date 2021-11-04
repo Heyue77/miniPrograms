@@ -17,6 +17,7 @@
         </view>
     </van-cell>
 </van-cell-group>
-<view class="bottomline" >
-    没有更多书籍~
+<van-toast id="van-toast" />
+<view class="loding {{lodflag?'':'disnone'}}">
+    <van-loading type="spinner" color="#fff" />
 </view>

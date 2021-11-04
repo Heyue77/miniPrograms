@@ -19,8 +19,8 @@
           "scene": null
         },
         {
-          "name": "pages/classify/classify",
-          "pathName": "pages/classify/classify",
+          "name": "pages/bookstore/bookstore",
+          "pathName": "pages/bookstore/bookstore",
           "query": "",
           "scene": null
         }

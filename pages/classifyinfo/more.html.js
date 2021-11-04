@@ -3,11 +3,13 @@ import { requestGet,baseURL } from "../../utils/reqeust";
 Page({
 	data: {
 		title: "",
-		booklist:[]
+		booklist:[],
+		loading: true,
+		pageIndex:1
 	},
 
 	onLoad: function (options) {
-		console.log(options);
+		// console.log(options);
 		this.setData({
 			title: options.title
 		});
@@ -19,44 +21,31 @@ Page({
 		});
 	},
     async getRankmoreData(){
-       const result=await requestGet(baseURL+`actionid=${this.options.actionid}&type=${this.options.type}&id=${this.options.id}&name=${this.options.title}`);
-	   console.log(result);
+       const result=await requestGet(baseURL+`actionid=${this.options.actionid}&type=${this.options.type}&id=${this.options.id}&name=${this.options.title}&pageindex=${this.data.pageIndex}`);
+	//    console.log(result);
 	   this.setData({
-         booklist:result.ResponseObject[0].module.itemList
+         booklist:[...this.data.booklist,...result.ResponseObject[0].module.itemList],
+		 loading: false
 	   })
 	},
-	/**
-	 * 生命周期函数--监听页面初次渲染完成
-	 */
-	onReady: function () {},
+	// 触底加载
+	onReachBottom: function () {
+		this.setData({
+			pageIndex: ++this.data.pageIndex
+		});
+		// console.log(this.data.pageIndex);
+		this.getRankmoreData();
+	},
+	// 下拉刷新
+	onPullDownRefresh: function () {
+		this.setData({
+			pageIndex: 1,
+			list: []
+		});
+		//当异步任务有了结果之后，就可以停止下拉刷新
+		this.getListData().then(() => {
+			wx.stopPullDownRefresh();
+		});
+	}
 
-	/**
-	 * 生命周期函数--监听页面显示
-	 */
-	onShow: function () {},
-
-	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
-	onHide: function () {},
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
-	onUnload: function () {},
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function () {},
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
-	onReachBottom: function () {},
-
-	/**
-	 * 用户点击右上角分享
-	 */
-	onShareAppMessage: function () {}
 });

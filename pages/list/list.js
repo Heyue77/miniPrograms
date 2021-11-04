@@ -1,38 +1,42 @@
 // pages/list/list.js
-import { requestGet, homeURL,listURL } from "../../utils/reqeust";
+import { requestGet, homeURL, listURL } from "../../utils/reqeust";
+import Toast from "../../components/vant/toast/toast";
 Page({
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
 		bookid: null,
-		resultlist: []
+		resultlist: [],
+		pageindex: 5,
+		lodflag: false,
+		flag: false
 	},
 
 	onLoad: function (options) {
-		// console.log(options);
-		// this.id = options.id;
+		this.setData({
+			pageindex:options.id
+		})
 		this.getBooklist();
 	},
 	async getBooklist() {
-		const result = await requestGet(listURL);
-		console.log(result.ResponseObject[0].module.itemList);
+		Toast.loading({
+			duration: 0,
+			message: "加载中...",
+			forbidClick: true,
+			loadingType: "spinner",
+			selector: "#van-toast"
+		});
+		const result = await requestGet(listURL + this.data.pageindex);
+		// console.log(result.ResponseObject[0].module.itemList);
+		Toast.clear();
 		this.setData({
-			resultlist: result.ResponseObject[0].module.itemList,
-
+			resultlist: [
+				...this.data.resultlist,
+				...result.ResponseObject[0].module.itemList
+			]
 		});
 	},
-
-	onReady: function () {},
-
-	/**
-	 * 生命周期函数--监听页面显示
-	 */
-	onShow: function () {},
-
-	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
 	onHide: function () {},
 
 	/**
@@ -48,7 +52,13 @@ Page({
 	/**
 	 * 页面上拉触底事件的处理函数
 	 */
-	onReachBottom: function () {},
+	onReachBottom: function () {
+		this.setData({
+			pageindex: ++this.data.pageindex,
+			lodflag: true
+		});
+		this.getBooklist()
+	},
 
 	/**
 	 * 用户点击右上角分享

@@ -1,2 +1,48 @@
-<!--pages/bookinfo/bookinfo.wxml-->
-<text>pages/bookinfo/bookinfo.wxml</text>
+<scroll-view scroll-y="true" class="container">
+    <view class="book">
+        <image class="bookimg" src="{{bookinfos.cover}}" mode="widthFix"></image>
+        <view class="booktitle">{{bookinfos.name}}</view>
+        <view class="bookauthor">{{bookinfos.author}}</view>
+        <view class="cate">
+            <van-tag round type="primary" size="medium" color="#f2826a">
+                {{bookinfos.category}}
+            </van-tag>
+            <van-tag round type="primary" size="medium" color="#f2826a">
+                {{bookinfos.update}}
+            </van-tag>
+        </view>
+        <view class="bookstore">
+            <text class="">评分：{{bookinfos.score}}</text>
+            <text class="line">|</text>
+            <text class="count">{{bookinfos.peopleRate}}</text>
+        </view>
+        <van-rate value="{{ value }}" allow-half void-icon="star" color="#ffa500" void-color="#aaa" />
+    </view>
+    <view class="grid">
+        <view class="box">
+            <text class="num">{{bookinfos.wordCount}}</text>
+            <text class="name">字数</text>
+        </view>
+        <view class="box">
+            <text class="num">{{bookinfos.star}}</text>
+            <text class="name">好评率</text>
+        </view>
+        <view class="box">
+            <text class="num">{{bookinfos.latelyFollower}}</text>
+            <text class="name">收藏人数</text>
+        </view>
+    </view>
+    <view class="info">
+        <view class="title">简介</view>
+        <view class="longIntro {{fold?'fold':'unfold'}}" bindtap="fold">
+            {{bookinfos.introduce}}
+        </view>
+        <text bindtap="fold">{{fold?'查看全部':'收起'}}</text>
+    </view>
+</scroll-view>
+<view class="btn">
+    <view class="butt add" bindtap = "sendid" >加入书架</view>
+    <navigator class="butt read" url="/pages/bookpage/bookpage?bookId={{bookinfos.bookId}}&chapterId={{bookinfos.chapterId}}">
+        开始阅读
+    </navigator>
+</view>

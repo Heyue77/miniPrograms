@@ -1,6 +1,6 @@
 <!-- pages/bookstore/bookstore.wxml -->
 <!-- 搜索框 -->
-<van-search value="{{ value }}" shape="round" background="#e3dae9" placeholder="请输入搜索关键词" />
+<van-search value="{{ value }}" shape="round" background="#e3dae9" placeholder="请输入搜索关键词" bind:change="onChange"  bind:search="onSearch" />
 <!-- 轮播图 -->
 <swiper class="swiper" indicator-dots="{{true}}" indicator-color="rgba(0,0,0,.3)" autoplay="{{true}}" interval="5000" duration="1000" circular="{{true}}">
     <swiper-item class="swpitem" wx:for="{{banner}}" wx:for-item="item" wx:key="id">
@@ -21,7 +21,7 @@
             今日力荐
         </view>
         <view class="more">
-            <navigator url="/pages/list/list" hover-class="none">
+            <navigator url="/pages/list/list?id=5" hover-class="none">
                 更多
                 <text class="iconfont icon-changyong_fanhui"></text>
             </navigator>
@@ -29,7 +29,7 @@
     </view>
     <view class="shorpcontent">
         <view class="shortpitem" wx:for="{{shortps}}" wx:for-item="item" wx:key="id">
-            <navigator url="/pages/bookinfo/bookinfo?id={{item._id}}" hover-class="none">
+            <navigator url="/pages/bookinfo/bookinfo?id={{item.BookId}}" hover-class="none">
                 <view class="itemimg">
                     <image src="{{item.Cover}}" mode="widthFix"></image>
                 </view>
@@ -47,7 +47,7 @@
             人气佳作
         </view>
         <view class="more">
-            <navigator url="/pages/list/list" hover-class="none">
+            <navigator url="/pages/list/list?id=6" hover-class="none">
                 更多
                 <text class="iconfont icon-changyong_fanhui"></text>
             </navigator>
@@ -55,7 +55,7 @@
     </view>
     <view class="shorpcontent">
         <view class="shortpitem" wx:for="{{populars}}" wx:for-item="item" wx:key="id">
-            <navigator url="/pages/bookinfo/bookinfo?id={{item._id}}" hover-class="none">
+            <navigator url="/pages/bookinfo/bookinfo?id={{item.BookId}}" hover-class="none">
                 <view class="itemimg">
                     <image src="{{item.Cover}}" mode="widthFix"></image>
                 </view>
@@ -73,14 +73,14 @@
             猜你喜欢
         </view>
         <view class="more">
-            <navigator url="/pages/list/list" hover-class="none">
+            <navigator url="/pages/list/list?id=7" hover-class="none">
                 更多
                 <text class="iconfont icon-changyong_fanhui"></text>
             </navigator>
         </view>
     </view>
     <van-cell-group>
-        <van-cell  url="/pages/bookinfo/bookinfo?id={{item._id}}" center use-label-slot wx:for="{{likelist}}" wx:for-item="item" wx:key="id" title="{{item.Name}}">
+        <van-cell url="/pages/bookinfo/bookinfo?id={{item.BookId}}" center use-label-slot wx:for="{{likelist}}" wx:for-item="item" wx:key="id" title="{{item.Name}}">
             <view slot="icon" class="iconview">
                 <image class="icon" src="{{item.Cover}}" />
             </view>
@@ -98,6 +98,6 @@
         </van-cell>
     </van-cell-group>
 </view>
-<view class="bottomline" >
-    没有啦，我也是有底线的~
+<view class="{{flag?'':'disnone'}} bottomline" >
+    没有了，我也是有底线的~
 </view>

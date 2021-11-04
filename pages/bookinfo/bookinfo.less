@@ -1,0 +1,122 @@
+.container {
+    padding: 20rpx;
+    height : 530px;
+
+    .book {
+        overflow: hidden;
+
+        .bookimg {
+            float         : left;
+            width         : 250rpx;
+            vertical-align: top;
+            margin        : 0 20rpx 20rpx 0;
+        }
+
+        .booktitle {
+            font-size  : 20px;
+            font-weight: 700;
+        }
+
+        .bookauthor {
+            font-size: 14px;
+            margin   : 20rpx 0;
+        }
+
+        .cate {
+            margin: 20rpx 0;
+
+            .bookauthor {
+                margin-right: 18rpx;
+            }
+        }
+
+        .bookstore {
+            margin: 20rpx 0;
+
+            .line {
+                margin: 0 20rpx;
+            }
+
+            .count {
+                font-size: 14px;
+                color    : #aaa;
+
+            }
+        }
+    }
+
+    .grid {
+        display: flex;
+        padding: 20rpx 0;
+
+        .box {
+            flex          : 1;
+            display       : flex;
+            flex-direction: column;
+            text-align    : center;
+
+            .name {
+                color    : #aaa;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .info {
+        padding: 0 20rpx;
+
+
+        .title {
+            font-size    : 20px;
+            font-weight  : 700;
+            margin-bottom: 10rpx;
+        }
+
+        .longIntro {
+            overflow          : hidden;
+            text-overflow     : ellipsis;
+            -webkit-box-orient: vertical;
+            display           : -webkit-box;
+        }
+
+        .fold {
+            -webkit-line-clamp: 3;
+        }
+
+        .unfold {
+            -webkit-line-clamp: 0;
+        }
+    }
+
+
+
+
+
+}
+
+.btn {
+    display       : flex;
+    flex-direction: row;
+    position      : absolute;
+    bottom        : 0;
+    left          : 0;
+    width         : 100%;
+
+    .butt {
+        width        : 80%;
+        flex         : 1;
+        padding      : 10px 20rpx;
+        margin       : 0 20rpx 20px 20rpx;
+        text-align   : center;
+        border-radius: 10px;
+
+    }
+
+    .add {
+        background-color: rgb(141, 165, 180);
+    }
+
+    .read {
+        background-color: rgb(189, 154, 159);
+    }
+}

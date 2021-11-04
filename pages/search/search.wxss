@@ -1,4 +1,4 @@
-/* pages/classifyinfo/classifyinfo.wxss */
+/* pages/search/search.wxss */
 .van-cell .iconview {
 	margin-right: 10rpx;
 }
@@ -11,7 +11,7 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
-	-webkit-line-clamp: 2;
+	-webkit-line-clamp: 3;
 	/*两行,超出为省略号*/
 	-webkit-box-orient: vertical;
 	align-content: center;
@@ -41,4 +41,10 @@
 .loding{
 	text-align: center;
 	margin: 0 auto;
+}
+.searchHigh{
+    color:red
+}
+.shownone{
+	display:none
 }

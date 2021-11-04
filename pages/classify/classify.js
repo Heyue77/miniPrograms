@@ -31,7 +31,7 @@ Page({
 	},
 	async getClassifyData() {
 		const result = await requestGet(classifyURL);
-		console.log(result);
+		// console.log(result);
 		this.setData({
 			male: result.ResponseObject[0].module[0].id=1?result.ResponseObject[0].module[0].itemList:result.ResponseObject[0].module[1].itemList,
 			female: result.ResponseObject[0].module[1].id=2?result.ResponseObject[0].module[1].itemList:result.ResponseObject[0].module[0].itemList
