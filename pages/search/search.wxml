@@ -1,5 +1,8 @@
 <!-- pages/search/search.wxml -->
-<van-search value="{{ value }}" shape="round" background="#e3dae9" placeholder="请输入搜索关键词" bind:change="onChange" bind:search="onSearch" />
+<!-- <view class="searchbox"> -->
+<!-- <text class="goback iconfont icon-changyong_fanhui" bindtap = "goback"> </text> -->
+<van-search  class="search" value="{{ value }}" shape="round" background="#e3dae9" placeholder="请输入搜索关键词" bind:change="onChange" bind:search="onSearch" />
+<!-- </view> -->
 <view class="{{showtitle?'':'shownone'}}">{{value}}的相关作品</view>
 <van-cell-group>
     <van-skeleton row="3" avatar title loading="{{ loading }}" avatar-shape="square" avatar-size="50px">
@@ -23,7 +26,7 @@
                     </view>
                     <view class="type">
                         <!-- {{item.status}} -->
-                        <text wx:for="{{item.status}}" wx:key="{{index}}" class="{{item == value ? 'searchHigh' : '' }}">{{item}}</text>              
+                        <text wx:for="{{item.status}}" wx:key="index" class="{{item == value ? 'searchHigh' : '' }}">{{item}}</text>              
                     </view>
                     <view class="type">
                      {{item.score}}分

@@ -4,7 +4,7 @@
 <!-- 轮播图 -->
 <swiper class="swiper" indicator-dots="{{true}}" indicator-color="rgba(0,0,0,.3)" autoplay="{{true}}" interval="5000" duration="1000" circular="{{true}}">
     <swiper-item class="swpitem" wx:for="{{banner}}" wx:for-item="item" wx:key="id">
-        <navigator url="/pages/bookinfo/bookinfo?id={{item.link}}" open-type="navigate" hover-class="none">
+        <navigator url="/pages/list/list" open-type="navigate" hover-class="none">
             <image class="swpimg" src="{{item.img}}" mode="widthFix" lazy-load="{{true}}" />
         </navigator>
     </swiper-item>

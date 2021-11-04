@@ -1,0 +1,106 @@
+.container {
+    padding : 10rpx 20rpx;
+    position: relative;
+    height  : 530px;
+
+    .scroll {
+        .title {
+            text-align: center;
+        }
+
+        .content {
+            line-height: 60rpx;
+            text-indent: 2em;
+        }
+
+        .change {
+            display: flex;
+
+
+            .item {
+                flex            : 1;
+                text-align      : center;
+                background-color: #666;
+                height          : 60rpx;
+                line-height     : 60rpx;
+                border-radius   : 20rpx;
+            }
+        }
+    }
+
+    .menu {
+        position        : fixed;
+        bottom          : 0;
+        left            : 0;
+        height          : 300rpx;
+        width           : 100%;
+        color           : #000;
+        font-size       : 16px;
+        background-color: #eee;
+
+        .list {
+            display      : flex;
+            border-bottom: 1px solid #e3e3e3;
+        }
+
+        .item {
+            flex          : 1;
+            text-align    : center;
+            height        : 100rpx;
+            line-height   : 100rpx;
+            // border     : 1px solid #aaa;
+        }
+
+        .color {
+            display      : flex;
+            border-bottom: 1px solid #e3e3e3;
+
+            .white {
+                background-color: #eaeaea;
+            }
+
+            .black {
+                background-color: #666;
+            }
+
+            .green {
+                background-color: #d5f6d6;
+            }
+
+        }
+
+        .font {
+            display      : flex;
+            border-bottom: 1px solid #e3e3e3;
+        }
+    }
+
+    .catapage {
+        width           : 100%;
+        position        : fixed;
+        height          : 605px;
+        top             : 0;
+        left            : 0;
+        background-color: pink;
+        display         : none;
+
+        .cancel {
+            height          : 80rpx;
+            width           : 100%;
+            text-align      : center;
+            line-height     : 80rpx;
+            position        : fixed;
+            bottom          : 0;
+            left            : 0;
+            background-color: rgb(192, 72, 72);
+        }
+    }
+
+    .fold {
+        display: none;
+    }
+
+    .unfold {
+        display: block;
+    }
+}

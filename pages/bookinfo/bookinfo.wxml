@@ -27,10 +27,10 @@
             <text class="num">{{bookinfos.star}}</text>
             <text class="name">好评率</text>
         </view>
-        <view class="box">
+        <!-- <view class="box">
             <text class="num">{{bookinfos.latelyFollower}}</text>
             <text class="name">收藏人数</text>
-        </view>
+        </view> -->
     </view>
     <view class="info">
         <view class="title">简介</view>
@@ -39,9 +39,35 @@
         </view>
         <text bindtap="fold">{{fold?'查看全部':'收起'}}</text>
     </view>
+    <view class="hotcomment">
+        <view class="commenttitle">最新评论</view>
+        <van-cell-group>
+            <van-cell class="commentitem" use-label-slot wx:for="{{comments}}" wx:for-item="item" wx:key="CommentId">
+                <view class="cover" slot="icon">
+                    <image class="commentcover" src="{{item.HeadUrl}}" mode="widthFix"></image>
+                </view>
+                <view class="msg" slot="label">
+                    <view class="name">{{item.SenderName}}</view>
+                    <view class="time">{{item.SendTime}}</view>
+                    <view class="content">{{item.Content}}</view>
+                </view>
+                <view class="score">
+                    <van-rate value="{{ item.Score }}" allow-half void-icon="star" color="#ffa500" void-color="#aaa" size="14px" />
+                </view>
+            </van-cell>
+        </van-cell-group>
+        <view class="" hover-class="none" hover-stop-propagation="false"></view>
+    </view>
+    <view class="hobit">
+        <view class="itemtitle">相似推荐</view>
+        <navigator class="hobititem" url="/pages/bookinfo/bookinfo?id={{item.BookId}}" wx:for="{{hobits}}" wx:for-item="item" wx:key="BookId">
+            <image class="hobitcover" src="{{item.Cover}}" mode="widthFix"></image>
+            <view class="itemname">{{item.Name}}</view>
+        </navigator>
+    </view>
 </scroll-view>
 <view class="btn">
-    <view class="butt add" bindtap = "sendid" >加入书架</view>
+    <navigator class="butt add">加入书架</navigator>
     <navigator class="butt read" url="/pages/bookpage/bookpage?bookId={{bookinfos.bookId}}&chapterId={{bookinfos.chapterId}}">
         开始阅读
     </navigator>

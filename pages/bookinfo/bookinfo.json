@@ -2,6 +2,9 @@
   "usingComponents": {
     "van-tag": "/components/vant/tag/index",
     "van-grid": "/components/vant/grid/index",
-    "van-rate": "/components/vant/rate/index"
-  }
+    "van-rate": "/components/vant/rate/index",
+    "van-cell": "/components/vant/cell/index",
+    "van-cell-group": "/components/vant/cell-group/index"
+  },
+  "navigationBarTitleText": "书籍详情"
 }

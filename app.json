@@ -12,6 +12,7 @@
     "pages/rank/rank",
     "pages/rankmore/rankmore",
     "pages/search/search"
+
   ],
   "window":{
     "backgroundTextStyle":"light",

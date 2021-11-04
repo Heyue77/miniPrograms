@@ -27,35 +27,9 @@ Page({
 		this.setData({
 			value: options.keyword
 		});
-	},
-	onChange(e) {
-		this.setData({
-			value: e.detail,
-			showtitle: false
-		});
-	},
-	onSearch() {
-		this.setData({
-			showtitle: true
-		});
-
-		console.log("搜索" + this.data.value);
-		wx.navigateTo({
-			url: `/pages/search/search?keyword=${this.data.value}`,
-			success: (result) => {},
-			fail: () => {},
-			complete: () => {}
-		});
-	},
-
-
-
-	/**
-	 * 生命周期函数--监听页面初次渲染完成
-	 */
-	onReady: function () {
 		this.getSearchData();
 	},
+
 	async getSearchData() {
 		const result = await requestGet(searchURL + this.data.value);
 		console.log(result);
@@ -72,12 +46,12 @@ Page({
 			const newDic = newData[i];
 			const name = dic["name"];
 			newDic["name"] = getInf(name, this.data.value);
-      const author =dic["author"];
-      newDic["author"] = getInf(author, this.data.value);
-      const status =dic["status"];
-      newDic["status"] = getInf(status, this.data.value);
-      // const score =dic["score"];
-      // newDic["score"] = getInf(score, this.data.value);
+			const author = dic["author"];
+			newDic["author"] = getInf(author, this.data.value);
+			const status = dic["status"];
+			newDic["status"] = getInf(status, this.data.value);
+			// const score =dic["score"];
+			// newDic["score"] = getInf(score, this.data.value);
 			// var introduce = dic["introduce"];
 			// newDic["introduce"] = getInf(introduce, this.data.value);
 		}
@@ -88,8 +62,30 @@ Page({
 	// trim: function (s) {
 	// 	return s.replace(/(^\s*)|(\s*$)/g, "");
 	// },
+	onChange(e) {
+		this.setData({
+			value: e.detail,
+			showtitle: false
+		});
+	},
+	onSearch() {
+		this.setData({
+			value: this.data.value,
+			showtitle: true
+		});
 
-  onReachBottom: function () {
+		console.log("搜索" + this.data.value);
+		// this.getSearchData();
+		// console.log(this.data.booklist)
+		wx.reLaunch({
+			url: `/pages/search/search?keyword=${this.data.value}`,
+			success: (result) => {},
+			fail: () => {},
+			complete: () => {}
+		});
+	},
+
+	onReachBottom: function () {
 		this.setData({
 			pageIndex: ++this.data.pageIndex
 		});

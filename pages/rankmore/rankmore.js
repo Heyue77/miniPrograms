@@ -1,4 +1,5 @@
-import { requestGet,baseURL } from "../../utils/reqeust";
+import { requestGet, baseURL } from "../../utils/reqeust";
+import Toast from "../../components/vant/toast/toast";
 
 // pages/rankmore/rankmore.js
 Page({
@@ -7,7 +8,9 @@ Page({
 	 */
 	data: {
 		title: "",
-    resultlist:[]
+		pageindex: 1,
+		resultlist: [],
+		flag:false
 	},
 
 	/**
@@ -15,19 +18,38 @@ Page({
 	 */
 	onLoad: function (options) {
 		console.log(options);
-    
+
 		this.setData({
 			title: options.title
 		});
-    this.getRankData();
+		this.getRankData();
 	},
-  async getRankData(){
-    const result=await requestGet(baseURL+`actionid=${this.options.actionid}&id=${this.options.id}&name=${this.options.name}&type=${this.options.Type}&Channel=${this.options.Channel}`);
-    console.log(result)
-    this.setData({
-      resultlist: result.ResponseObject[0].module.itemList
-    })
-  },
+	onClickLeft() {
+		wx.navigateBack({
+			delta: 1
+		});
+	},
+	async getRankData() {
+		Toast.loading({
+			duration: 0,
+			message: "加载中...",
+			forbidClick: true,
+			loadingType: "spinner",
+			selector: "#van-toast"
+		});
+		const result = await requestGet(
+			baseURL +
+				`actionid=${this.options.actionid}&id=${this.options.id}&name=${this.options.name}&type=${this.options.Type}&Channel=${this.options.Channel}&pageindex=${this.data.pageindex}`
+		);
+		// console.log(result)
+		Toast.clear();
+		this.setData({
+			resultlist: [
+				...this.data.resultlist,
+				...result.ResponseObject[0].module.itemList
+			]
+		});
+	},
 
 	/**
 	 * 生命周期函数--监听页面初次渲染完成
@@ -57,7 +79,13 @@ Page({
 	/**
 	 * 页面上拉触底事件的处理函数
 	 */
-	onReachBottom: function () {},
+	onReachBottom: function () {
+		this.setData({
+			pageindex: ++this.data.pageindex,
+			flag:true
+		});
+		this.getRankData();
+	},
 
 	/**
 	 * 用户点击右上角分享

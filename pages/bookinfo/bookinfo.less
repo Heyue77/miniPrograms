@@ -1,9 +1,12 @@
 .container {
-    padding: 20rpx;
-    height : 530px;
+    // padding: 0 20rpx;
+    height: 530px;
+    color : #333;
 
     .book {
-        overflow: hidden;
+        overflow        : hidden;
+        padding         : 20rpx;
+        background-color: #fff;
 
         .bookimg {
             float         : left;
@@ -46,8 +49,9 @@
     }
 
     .grid {
-        display: flex;
-        padding: 20rpx 0;
+        display         : flex;
+        padding         : 20rpx 0;
+        background-color: #fff;
 
         .box {
             flex          : 1;
@@ -63,13 +67,13 @@
     }
 
     .info {
-        padding: 0 20rpx;
+        padding: 20rpx;
 
 
         .title {
-            font-size    : 20px;
-            font-weight  : 700;
-            margin-bottom: 10rpx;
+            font-size  : 20px;
+            font-weight: 700;
+            margin     : 20rpx 0;
         }
 
         .longIntro {
@@ -88,10 +92,65 @@
         }
     }
 
+    .hobit {
+        padding          : 40rpx 10rpx;
+        overflow         : hidden;
+        // display       : flex;
+        // flex-direction: row;
+
+        .itemtitle {
+            font-size  : 20px;
+            font-weight: 700;
+            padding    : 20rpx 10rpx;
+        }
+
+        .hobititem {
+            // flex      : 1;
+            width     : 25%;
+            float     : left;
+            text-align: center;
 
 
+            .hobitcover {
+                width: 90%;
 
+            }
+        }
+    }
 
+    .hotcomment {
+        .commenttitle {
+            font-size       : 20px;
+            font-weight     : 700;
+            padding         : 20rpx 10rpx;
+            background-color: #fff;
+        }
+
+        .commentitem {
+            width : 100%;
+            height: 200rpx;
+
+            .cover {
+                margin-right: 20rpx;
+
+                .commentcover {
+                    width: 100rpx;
+                }
+            }
+
+        }
+    }
+}
+
+.van-cell {
+
+    >.van-cell__title {
+        flex: 5
+    }
+
+    >.van-cell__value {
+        flex: 3
+    }
 }
 
 .btn {

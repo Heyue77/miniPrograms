@@ -48,3 +48,13 @@
 .shownone{
 	display:none
 }
+/* .searchbox{
+	display:flex;
+}
+.goback{
+	flex: 1;
+	text-align: center;
+}
+.search{
+	flex: 5
+} */

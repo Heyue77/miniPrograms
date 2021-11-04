@@ -33,8 +33,15 @@
 	padding: 0 8rpx;
 	margin-left: 10rpx;
 }
-.bottomline{
+.bottomline {
 	font-size: 12px;
 	color: #aaa;
 	text-align: center;
+}
+.disnone {
+	display: none;
+}
+.loding {
+	text-align: center;
+	margin: 0 auto;
 }

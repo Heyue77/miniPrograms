@@ -21,7 +21,7 @@
                     </navigator>
                 </view>
             </view>
-            <navigator class="more" url="/pages/rankmore/rankmore?{{malehoturl}}&title={{module[0].name}}">查看完整榜单>>></navigator>
+            <navigator class="more" url="/pages/rankmore/rankmore?{{malehoturl}}&title={{module[0].name}}" hover-class="none">查看完整榜单>>></navigator>
         </view>
         <!-- 男频人气榜 -->
          <view class="contentbox">
@@ -44,7 +44,7 @@
                     </navigator>
                 </view>
             </view>
-            <navigator class="more" url="/pages/rankmore/rankmore?{{malepopurl}}&title={{module[2].name}}">查看完整榜单>>></navigator>
+            <navigator class="more" url="/pages/rankmore/rankmore?{{malepopurl}}&title={{module[2].name}}" hover-class="none">查看完整榜单>>></navigator>
         </view>
     </van-tab>
     <van-tab title="女生">
@@ -68,7 +68,7 @@
                     </navigator>
                 </view>
             </view>
-            <navigator class="more" url="/pages/rankmore/rankmore?{{femalehoturl}}&title={{module[1].name}}">查看完整榜单>>></navigator>
+            <navigator class="more" url="/pages/rankmore/rankmore?{{femalehoturl}}&title={{module[1].name}}" hover-class="none">查看完整榜单>>></navigator>
         </view>
         <!-- 女频人气榜 -->
          <view class="contentbox">
@@ -91,10 +91,7 @@
                     </navigator>
                 </view>
             </view>
-            <navigator class="more" url="/pages/rankmore/rankmore?{{femalepopurl}}&title={{module[3].name}}">查看完整榜单>>></navigator>
+            <navigator class="more" url="/pages/rankmore/rankmore?{{femalepopurl}}&title={{module[3].name}}" hover-class="none">查看完整榜单>>></navigator>
         </view>
     </van-tab>
 </van-tabs>
-<!-- https://ccdn.andreader.com/sharp/H5BookStore/act.ashx?gender=0&actionid=9008
-https://ccdn.andreader.com/sharp/H5BookStore/act.ashx?gender=0&actionid=9004&id=2&type=3&take=20&pageIndex=1&name=%25E5%25A5%25B3%25E9%25A2%2591%25E4%25BA%25BA%25E6%25B0%2594%25E6%25A6%259C&channel=1
-https://ccdn.andreader.com/sharp/H5BookStore/act.ashx?&gender=0&actionid=9004&id=0&type=3&take=20&pageIndex=1&name=%25E5%25A5%25B3%25E9%25A2%2591%25E7%2583%25AD%25E9%2594%2580%25E6%25A6%259C&channel=1 -->

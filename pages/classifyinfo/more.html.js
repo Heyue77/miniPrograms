@@ -16,8 +16,8 @@ Page({
 		this.getRankmoreData();
 	},
 	onClickLeft() {
-		wx.navigateTo({
-			url: "/pages/classify/classify"
+		wx.navigateBack({
+			delta: 1
 		});
 	},
     async getRankmoreData(){
