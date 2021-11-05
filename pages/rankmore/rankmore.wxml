@@ -18,7 +18,7 @@
         </view>
     </van-cell>
 </van-cell-group>
-<van-toast id="van-toast" />
+<!-- <van-toast id="van-toast" /> -->
 <view class="loding {{flag?'':'disnone'}}">
     <van-loading type="spinner" color="#fff" />
 </view>

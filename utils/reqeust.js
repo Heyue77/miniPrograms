@@ -29,7 +29,15 @@ export function requestGet(url, data) {
 			complete: function (res) {}
 		});
 	});
+
+ 
 }
+// 听书接口
+export var getBookMenuURL = "https://m.lrts.me/ajax/getBookMenu/";
+export var getResourceListURL = "https://m.lrts.me/ajax/getResourceList?dsize=20&entityType=1&pageNum=1&entityId=";
+export var getPlayPathURL = "https://m.lrts.me/ajax/getPlayPath/";
+export var getBookDetailURL = "https://m.lrts.me/ajax/getBookDetail/"
+
 
 // 轮播图接口
 export var bannerURL = "https://b.zhuishushenqi.com/category/classifylist?node=bf0a65255a5b4c138052dca8ef065753"; //GET请求
@@ -50,5 +58,6 @@ export var bookInfoURL = "https://ccdn.andreader.com/sharp/H5BookStore/act.ashx?
 export var bookPageURL = "https://ccdn.andreader.com/sharp/H5BookStore/act.ashx?sid=1211e0fbc6fdc938a715ff6b68aaf9a7&chl=small_xiaoan&guid=obzfs0K9HrrxhPC_O0GG5oQfuwPI&isSmall=1&platform=1&device=microsoft&sysreleasever=Windows%2010%20x64&gender=0&nonce=46d13766-adc4-eaaa-d010-bd58a2a6f2ae&timestamp=1635840800535&mt=12&over=355&ver=355&appver=3.5.7&x=4&actionid=9007&"  //GET请求 {bookid}?view=chapters
 export var chapterURL = "https://ccdn.andreader.com/sharp/H5BookStore/act.ashx?actionid=9005&bookid="
 export var staticURL = "https://ccdn.andreader.com/sharp/H5BookStore/act.ashx?"
-//分类页面接口
-// export var classifyURL="https://b.zhuishushenqi.com/category/cats"  //GET请求 
+
+
+

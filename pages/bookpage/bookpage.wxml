@@ -1,17 +1,16 @@
 <!-- <import src="../../wxParse/wxParse.wxml"></import> -->
 <!-- <import src="../../wxParse/wxParse.wxml" /> -->
-<view class="container" style="background-color:{{backgroundcolor}};color:{{color}};font-size:{{fontsize}}px">
-    <scroll-view class="scroll  {{getScroll?'fold':'unfold'}}" scroll-with-animation='true' scroll-top='{{scrollTop}}' enable-back-to-top scroll-y='true' bindtap="getMenu">
+<view class="container">
+    <scroll-view class="scroll  {{getScroll?'fold':'unfold'}}" style="background-color:{{backgroundcolor}};color:{{color}};font-size:{{fontsize}}px" scroll-with-animation='true' scroll-top='{{scrollTop}}' enable-back-to-top scroll-y='true' bindtap="getMenu">
         <van-toast id="van-toast" />
         <!-- <view class="title">{{pages.name}}</view> -->
         <rich-text nodes="{{pages.txt}}" class="content" space="nbsp"></rich-text>
-        <van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:getuserinfo="onGetUserInfo" />
-        <view class="change">
-            <view class="prev item" bindtap="goPrev">上一章</view>
-            <view class="next item" bindtap="goNext">下一章</view>
-        </view>
+        <!-- <van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:getuserinfo="onGetUserInfo" /> -->
     </scroll-view>
-    <!-- 页面设置显示层 -->
+    <view class="change">
+        <view class="prev item" bindtap="getPrev">上一章</view>
+        <view class="next item" bindtap="getNext">下一章</view>
+    </view>
     <view class="menu {{getMenu?'fold':'unfold'}}">
         <view class="list">
             <view class="prev item" bindtap="goPrev">上一章</view>
@@ -31,11 +30,12 @@
             <view class="small item" bindtap="fontsmall">Aa-</view>
         </view>
     </view>
-    <!-- <scroll-view class="catapage  {{getCata?'fold':'unfold'}}" scroll-with-animation='true' scroll-top='{{scrollTop}}' enable-back-to-top scroll-y='true'>
+    <scroll-view class="catapage  {{getCata?'fold':'unfold'}}" bindscrolltolower="onReachBottom" scroll-with-animation='true' scroll-top='{{scrollTop}}' enable-back-to-top scroll-y='true'>
+        <van-toast id="van-toast" />
         <van-cell-group class="catalog">
             <van-cell bindtap="goPage" wx:for="{{chapters}}" wx:for-item="item" wx:key="index" data-index="{{item.chapterId}}" title="{{item.name}}" value="" />
-             url="/pages/bookpage/bookpage?bookId={{item.bookId}}&chapterId={{item.chapterId}}" 
+            <!-- url="/pages/bookpage/bookpage?bookId={{item.bookId}}&chapterId={{item.chapterId}}" -->
         </van-cell-group>
         <view class="cancel" bindtap="getCata">取消</view>
-    </scroll-view> -->
+    </scroll-view>
 </view>

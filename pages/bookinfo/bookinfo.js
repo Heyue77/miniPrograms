@@ -2,12 +2,13 @@ import { requestGet, bookInfoURL } from "../../utils/reqeust";
 Page({
   data: {
     bookinfos: {},
-    fold: true,
+    fold: true,//默认简介折叠
     id: null,
     value: "",
-    hobits: [],
-    comments: []
+    hobits: [],//相似推荐
+    comments: [],//书评
   },
+  //简介折叠
   fold: function () {
     var value = !this.data.fold;
     this.setData({
@@ -24,12 +25,11 @@ Page({
     const score = books.score;
     const hobitlist = books.hobitList.Data;
     const commentlist = result.ResponseObject[0].module.commentList;
-    console.log(commentlist, "kkkkkkk")
     this.setData({
       bookinfos: books,
       value: score,
       hobits: hobitlist,
-      comments: commentlist
+      comments: commentlist,
     });
   },
 

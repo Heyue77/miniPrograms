@@ -11,7 +11,9 @@
 </swiper>
 <!-- 宫格 -->
 <van-grid column-num="3" gutter="{{ 10 }}" border="{{false}}">
-    <van-grid-item class="gridbgc" wx:for="{{slide}}" wx:for-item="item" wx:key="id" icon="{{item.icon}}" text="{{item.name}}" url="{{item.url}}" link-type="{{item.link}}" />
+    <van-grid-item class="gridbgc" wx:for="{{slide}}" wx:for-item="item" wx:key="id"  text="{{item.name}}" url="{{item.url}}" link-type="{{item.link}}">
+          <view slot="icon"><text class="iconfont {{item.icon}}"></text></view>
+    </van-grid-item>
 </van-grid>
 <!-- 畅销短篇 -->
 <view class="shortp">

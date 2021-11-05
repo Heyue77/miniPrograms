@@ -1,6 +1,6 @@
 .container {
     // padding: 0 20rpx;
-    height: 530px;
+    height: 100vh;
     color : #333;
 
     .book {
@@ -34,15 +34,16 @@
         }
 
         .bookstore {
-            margin: 20rpx 0;
+            font-size: 14px;
+            margin   : 20rpx 0;
 
             .line {
                 margin: 0 20rpx;
             }
 
             .count {
-                font-size: 14px;
-                color    : #aaa;
+
+                color: #aaa;
 
             }
         }
@@ -67,11 +68,11 @@
     }
 
     .info {
-        padding: 20rpx;
-
+        padding  : 20rpx;
+        font-size: 14px;
 
         .title {
-            font-size  : 20px;
+            font-size  : 16px;
             font-weight: 700;
             margin     : 20rpx 0;
         }
@@ -81,6 +82,7 @@
             text-overflow     : ellipsis;
             -webkit-box-orient: vertical;
             display           : -webkit-box;
+
         }
 
         .fold {
@@ -93,42 +95,51 @@
     }
 
     .hobit {
-        padding          : 40rpx 10rpx;
-        overflow         : hidden;
-        // display       : flex;
-        // flex-direction: row;
+        margin: 60rpx 0rpx;
+        padding-bottom: 100rpx;
+        overflow: hidden;
+        background-color: #fff;
+        display: inline-block;
 
         .itemtitle {
-            font-size  : 20px;
+            font-size  : 16px;
             font-weight: 700;
             padding    : 20rpx 10rpx;
+
         }
 
         .hobititem {
             // flex      : 1;
+            padding   : 20rpx;
             width     : 25%;
             float     : left;
             text-align: center;
+            box-sizing: border-box;
 
 
             .hobitcover {
                 width: 90%;
 
             }
+
+            .itemname {
+                font-size: 14px;
+            }
         }
     }
 
     .hotcomment {
         .commenttitle {
-            font-size       : 20px;
+            font-size       : 16px;
             font-weight     : 700;
             padding         : 20rpx 10rpx;
             background-color: #fff;
         }
 
         .commentitem {
-            width : 100%;
-            height: 200rpx;
+            width   : 100%;
+            height  : 200rpx;
+            position: relative;
 
             .cover {
                 margin-right: 20rpx;
@@ -138,34 +149,43 @@
                 }
             }
 
+            .msg {
+                .time {
+                    font-size: 10px;
+                }
+            }
         }
     }
 }
 
 .van-cell {
+    position: relative;
 
     >.van-cell__title {
-        flex: 5
+        flex: 1
     }
 
     >.van-cell__value {
-        flex: 3
+        position: absolute;
+        right   : 10rpx;
     }
 }
 
 .btn {
-    display       : flex;
-    flex-direction: row;
-    position      : absolute;
-    bottom        : 0;
-    left          : 0;
-    width         : 100%;
+    display         : flex;
+    flex-direction  : row;
+    position        : absolute;
+    bottom          : 0;
+    left            : 0;
+    width           : 100%;
+    background-color: #fff;
 
     .butt {
-        width        : 80%;
-        flex         : 1;
-        padding      : 10px 20rpx;
-        margin       : 0 20rpx 20px 20rpx;
+        width  : 80%;
+        flex   : 1;
+        padding: 10px 20rpx;
+        margin : 20rpx;
+
         text-align   : center;
         border-radius: 10px;
 

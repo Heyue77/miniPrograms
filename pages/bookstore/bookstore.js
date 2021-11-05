@@ -12,21 +12,21 @@ Page({
         id:1,
         name:"分类",
         url:"/pages/classify/classify",
-        icon:"/assets/imgs/分类.png",
+        icon:"icon-fenlei",
         link:"navigateTo"
       },
       {
         id:2,
         name:"排行榜",
         url:"/pages/rank/rank",
-        icon:"/assets/imgs/排行榜.png",
+        icon:"icon-paihangbang",
         link:"navigateTo"
       },
       {
         id:3,
         name:"听书",
         url:"/pages/listen/listen",
-        icon:"/assets/imgs/听书.png",
+        icon:"icon-yangqitingshu",
         link:"switchTab"
       }
      

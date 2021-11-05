@@ -11,7 +11,9 @@
     "pages/list/list",
     "pages/rank/rank",
     "pages/rankmore/rankmore",
-    "pages/search/search"
+    "pages/search/search",
+        "pages/lista/lista",
+        "pages/listaa/listaa"
 
   ],
   "window":{
@@ -60,3 +62,5 @@
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
+
+  

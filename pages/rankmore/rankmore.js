@@ -17,6 +17,13 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
+		// Toast.loading({
+		// 	duration: 0,
+		// 	message: "加载中...",
+		// 	forbidClick: true,
+		// 	loadingType: "spinner",
+		// 	selector: "#van-toast"
+		// });
 		console.log(options);
 
 		this.setData({
@@ -30,19 +37,12 @@ Page({
 		});
 	},
 	async getRankData() {
-		Toast.loading({
-			duration: 0,
-			message: "加载中...",
-			forbidClick: true,
-			loadingType: "spinner",
-			selector: "#van-toast"
-		});
 		const result = await requestGet(
 			baseURL +
 				`actionid=${this.options.actionid}&id=${this.options.id}&name=${this.options.name}&type=${this.options.Type}&Channel=${this.options.Channel}&pageindex=${this.data.pageindex}`
 		);
 		// console.log(result)
-		Toast.clear();
+	
 		this.setData({
 			resultlist: [
 				...this.data.resultlist,
@@ -54,7 +54,9 @@ Page({
 	/**
 	 * 生命周期函数--监听页面初次渲染完成
 	 */
-	onReady: function () {},
+	onReady: function () {
+		// Toast.clear();
+	},
 
 	/**
 	 * 生命周期函数--监听页面显示

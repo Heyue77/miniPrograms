@@ -1,12 +1,13 @@
 /**app.wxss**/
+
 page{
-  background-color: rgb(227, 218, 233);
+  background-color: #e3dae9;
 }
 @font-face {
   font-family: 'iconfont';  /* Project id 2895082 */
-  src: url('//at.alicdn.com/t/font_2895082_bdvwgo1dqnk.woff2?t=1635855991150') format('woff2'),
-       url('//at.alicdn.com/t/font_2895082_bdvwgo1dqnk.woff?t=1635855991150') format('woff'),
-       url('//at.alicdn.com/t/font_2895082_bdvwgo1dqnk.ttf?t=1635855991150') format('truetype');
+  src: url('//at.alicdn.com/t/font_2895082_djj4pt421jv.woff2?t=1636076950756') format('woff2'),
+       url('//at.alicdn.com/t/font_2895082_djj4pt421jv.woff?t=1636076950756') format('woff'),
+       url('//at.alicdn.com/t/font_2895082_djj4pt421jv.ttf?t=1636076950756') format('truetype');
 }
 
 .iconfont {
@@ -15,6 +16,26 @@ page{
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-yangqitingshu:before {
+  content: "\e62f";
+}
+
+.icon-fenlei:before {
+  content: "\e60a";
+}
+
+.icon-paihangbang:before {
+  content: "\e65a";
+}
+
+.icon-zanting1:before {
+  content: "\e87a";
+}
+
+.icon-bofang:before {
+  content: "\e87c";
 }
 
 .icon-renqi1:before {

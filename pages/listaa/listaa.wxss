@@ -1,0 +1,16 @@
+.tp {
+  width: 100%;
+}
+.van-cell .iconview {
+  margin-right: 10rpx;
+}
+.van-cell .iconview .icon {
+  width: 100rpx;
+  height: 100rpx;
+}
+.van-cell > .van-cell__title {
+  flex: 5;
+}
+.van-cell > .van-cell__value {
+  flex: 3;
+}

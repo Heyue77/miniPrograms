@@ -3,19 +3,30 @@
 	height: calc(100% + 12px) !important;
 }
 .van-tabs__wrap {
-	height: var(--tabs-line-height, 24px);
-	width: 200rpx !important;
-	background-color: transparent !important;
+	height: var(--tabs-line-height, 34px);
+	width: 250rpx !important;
+	background-color: #e3dae9 !important;
+	border-radius: 30px;
+	border: 1px solid rgba(196, 192, 192,0.5);
+}
+.van-tabs--line .van-tabs__wrap {
+    height: var(--tabs-line-height,45px)!important;
 }
 .van-tabs__scroll {
 	background-color: transparent !important;
+	// border-bottom: 2px solid #9f5ad8
 }
 .van-tab--active {
-	font-size: 20px !important;
+	font-size: 16px !important;
+	background-color: rgba(255,255,255,0.3);
+	border-radius: 30px;
+	border-bottom: 1px solid #aaa;
+	// padding: 0;
+	// margin: 10rpx 0;
 }
 .van-tabs__line {
 	background-color: #9f5ad8 !important;
-	width: 30rpx !important;
+	width: 0rpx !important;
 }
 .contentbox {
 	width: 90%;

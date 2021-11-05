@@ -52,7 +52,7 @@
                     <view class="content">{{item.Content}}</view>
                 </view>
                 <view class="score">
-                    <van-rate value="{{ item.Score }}" allow-half void-icon="star" color="#ffa500" void-color="#aaa" size="14px" />
+                    <van-rate value="{{item.Score==0?'5':item.Score}}" allow-half void-icon="star" color="#ffa500" void-color="#aaa" size="14px" />
                 </view>
             </van-cell>
         </van-cell-group>

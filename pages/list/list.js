@@ -14,22 +14,23 @@ Page({
 	},
 
 	onLoad: function (options) {
+		
 		this.setData({
 			pageindex:options.id
 		})
-		this.getBooklist();
+		this.getBooklist()
 	},
 	async getBooklist() {
-		Toast.loading({
-			duration: 0,
-			message: "加载中...",
-			forbidClick: true,
-			loadingType: "spinner",
-			selector: "#van-toast"
-		});
+		// Toast.loading({
+		// 	duration: 0,
+		// 	message: "加载中...",
+		// 	forbidClick: true,
+		// 	loadingType: "spinner",
+		// 	selector: "#van-toast"
+		// });
 		const result = await requestGet(listURL + this.data.pageindex);
 		// console.log(result.ResponseObject[0].module.itemList);
-		Toast.clear();
+	
 		this.setData({
 			resultlist: [
 				...this.data.resultlist,
@@ -37,8 +38,9 @@ Page({
 			]
 		});
 	},
-	onHide: function () {},
-
+	onReady: function () {
+		
+	},
 	/**
 	 * 生命周期函数--监听页面卸载
 	 */

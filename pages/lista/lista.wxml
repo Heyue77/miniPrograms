@@ -1,0 +1,14 @@
+<view>
+    <van-cell-group>
+        <van-cell class="ts" url="/pages/listaa/listaa?id={{item.id}}" center use-label-slot wx:for="{{con1.books}}" wx:for-item="item" wx:key="id">
+            <view slot="icon" class="iconview">
+                <image class="icon" src="{{item.cover}}" />
+            </view>
+            <view slot="title" class="name">{{item.name}}</view>
+            <view slot="label">
+                <view class="desc">{{item.desc}}</view>
+                <view class="author"> <text class="iconfont icon-fl-renyuan"></text>{{item.author}}</view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+</view>

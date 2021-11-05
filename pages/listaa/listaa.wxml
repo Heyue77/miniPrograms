@@ -1,0 +1,12 @@
+<view wx:key="*this">
+    <image class="tp" src="{{resourcem.data.bookDetail.bestCover}}" mode="widthFix" />
+</view>
+<van-cell-group>
+    <van-cell wx:for="{{resource}}" wx:for-item="item" wx:key="id" title="{{item.name}}" use-label-slot>
+        <!-- use-label-slot url="/pages/ts/ts?id={{item.id}}&bookId={{bookId}}&sections={{item.section}}&cover={{resourcem.data.bookDetail.bestCover}}"> -->
+        <view  bindtap="bofang" data-section="{{item.section}}">
+            播放
+            <text class="iconfont {{section==item.section?'icon-zanting1':'icon-bofang'}}"></text>
+        </view>
+    </van-cell>
+</van-cell-group>

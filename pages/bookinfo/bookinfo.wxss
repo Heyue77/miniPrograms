@@ -1,1 +1,153 @@
-.container{height:530px;color:#333}.container .book{overflow:hidden;padding:20rpx;background-color:#fff}.container .book .bookimg{float:left;width:250rpx;vertical-align:top;margin:0 20rpx 20rpx 0}.container .book .booktitle{font-size:20px;font-weight:700}.container .book .bookauthor{font-size:14px;margin:20rpx 0}.container .book .cate{margin:20rpx 0}.container .book .cate .bookauthor{margin-right:18rpx}.container .book .bookstore{margin:20rpx 0}.container .book .bookstore .line{margin:0 20rpx}.container .book .bookstore .count{font-size:14px;color:#aaa}.container .grid{display:flex;padding:20rpx 0;background-color:#fff}.container .grid .box{flex:1;display:flex;flex-direction:column;text-align:center}.container .grid .box .name{color:#aaa;font-size:14px}.container .info{padding:20rpx}.container .info .title{font-size:20px;font-weight:700;margin:20rpx 0}.container .info .longIntro{overflow:hidden;text-overflow:ellipsis;-webkit-box-orient:vertical;display:-webkit-box}.container .info .fold{-webkit-line-clamp:3}.container .info .unfold{-webkit-line-clamp:0}.container .hobit{padding:40rpx 10rpx;overflow:hidden}.container .hobit .itemtitle{font-size:20px;font-weight:700;padding:20rpx 10rpx}.container .hobit .hobititem{width:25%;float:left;text-align:center}.container .hobit .hobititem .hobitcover{width:90%}.container .hotcomment .commenttitle{font-size:20px;font-weight:700;padding:20rpx 10rpx;background-color:#fff}.container .hotcomment .commentitem{width:100%;height:200rpx}.container .hotcomment .commentitem .cover{margin-right:20rpx}.container .hotcomment .commentitem .cover .commentcover{width:100rpx}.van-cell>.van-cell__title{flex:5}.van-cell>.van-cell__value{flex:3}.btn{display:flex;flex-direction:row;position:absolute;bottom:0;left:0;width:100%}.btn .butt{width:80%;flex:1;padding:10px 20rpx;margin:0 20rpx 20px 20rpx;text-align:center;border-radius:10px}.btn .add{background-color:#8da5b4}.btn .read{background-color:#bd9a9f}
+.container {
+  height: 100vh;
+  color: #333;
+}
+.container .book {
+  overflow: hidden;
+  padding: 20rpx;
+  background-color: #fff;
+}
+.container .book .bookimg {
+  float: left;
+  width: 250rpx;
+  vertical-align: top;
+  margin: 0 20rpx 20rpx 0;
+}
+.container .book .booktitle {
+  font-size: 20px;
+  font-weight: 700;
+}
+.container .book .bookauthor {
+  font-size: 14px;
+  margin: 20rpx 0;
+}
+.container .book .cate {
+  margin: 20rpx 0;
+}
+.container .book .cate .bookauthor {
+  margin-right: 18rpx;
+}
+.container .book .bookstore {
+  font-size: 14px;
+  margin: 20rpx 0;
+}
+.container .book .bookstore .line {
+  margin: 0 20rpx;
+}
+.container .book .bookstore .count {
+  color: #aaa;
+}
+.container .grid {
+  display: flex;
+  padding: 20rpx 0;
+  background-color: #fff;
+}
+.container .grid .box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.container .grid .box .name {
+  color: #aaa;
+  font-size: 14px;
+}
+.container .info {
+  padding: 20rpx;
+  font-size: 14px;
+}
+.container .info .title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 20rpx 0;
+}
+.container .info .longIntro {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+.container .info .fold {
+  -webkit-line-clamp: 3;
+}
+.container .info .unfold {
+  -webkit-line-clamp: 0;
+}
+.container .hobit {
+  margin: 60rpx 0rpx;
+  padding-bottom: 100rpx;
+  overflow: hidden;
+  background-color: #fff;
+  display: inline-block;
+}
+.container .hobit .itemtitle {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 20rpx 10rpx;
+}
+.container .hobit .hobititem {
+  padding: 20rpx;
+  width: 25%;
+  float: left;
+  text-align: center;
+  box-sizing: border-box;
+}
+.container .hobit .hobititem .hobitcover {
+  width: 90%;
+}
+.container .hobit .hobititem .itemname {
+  font-size: 14px;
+}
+.container .hotcomment .commenttitle {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 20rpx 10rpx;
+  background-color: #fff;
+}
+.container .hotcomment .commentitem {
+  width: 100%;
+  height: 200rpx;
+  position: relative;
+}
+.container .hotcomment .commentitem .cover {
+  margin-right: 20rpx;
+}
+.container .hotcomment .commentitem .cover .commentcover {
+  width: 100rpx;
+}
+.container .hotcomment .commentitem .msg .time {
+  font-size: 10px;
+}
+.van-cell {
+  position: relative;
+}
+.van-cell > .van-cell__title {
+  flex: 1;
+}
+.van-cell > .van-cell__value {
+  position: absolute;
+  right: 10rpx;
+}
+.btn {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+}
+.btn .butt {
+  width: 80%;
+  flex: 1;
+  padding: 10px 20rpx;
+  margin: 20rpx;
+  text-align: center;
+  border-radius: 10px;
+}
+.btn .add {
+  background-color: #8da5b4;
+}
+.btn .read {
+  background-color: #bd9a9f;
+}
