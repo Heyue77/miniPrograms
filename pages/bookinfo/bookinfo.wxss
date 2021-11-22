@@ -51,6 +51,7 @@
 .container .grid .box .name {
   color: #aaa;
   font-size: 14px;
+  width: 370rpx;
 }
 .container .info {
   padding: 20rpx;
@@ -75,10 +76,11 @@
 }
 .container .hobit {
   margin: 60rpx 0rpx;
-  padding-bottom: 100rpx;
   overflow: hidden;
-  background-color: #fff;
   display: inline-block;
+  padding-bottom: 80rpx;
+  background-color: #fff;
+  width: 100%;
 }
 .container .hobit .itemtitle {
   font-size: 16px;
@@ -147,6 +149,10 @@
 }
 .btn .add {
   background-color: #8da5b4;
+}
+.btn .addcolor {
+  background-color: rgba(255, 255, 255);
+  border: 1px solid #aaa;
 }
 .btn .read {
   background-color: #bd9a9f;

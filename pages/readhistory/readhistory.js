@@ -1,3 +1,5 @@
+import { requestGet, bookInfoURL } from "../../utils/reqeust";
+
 // 初始不全选
 // var isAll = false;
 Page({
@@ -13,78 +15,66 @@ Page({
 		hovercb: "hovercb",
 		isAll: false,
 		checked: false,
-		tag: true
+		tag: true,
+		chapterIndex: ""
 	},
 	//    页面初次加载
-	onLoad: function () {
-		// var res = wx.getStorageSync("bookstore");
-		// console.log(res,"bbbb")
-		// this.setData({
-		// 	bookracklist: res
-		// });
-	},
+	onLoad: function () {},
 	innerTap: function () {},
 	onReady: function () {},
 
 	//    页面展示时
 	onShow: function () {
 		// 获取缓存中的数据
-		let res = wx.getStorageSync("bookstore");
+		var res = wx.getStorageSync("readstore");
 		this.setData({
 			bookracklist: res
 		});
+		console.log(this.data.bookracklist, "数据集");
+		// this.onDelete(e);
 	},
 
+	//     点击管理
 	//点击阅读
 	gopagedata(e) {
 		const bookid = e.currentTarget.dataset.id;
-		console.log(bookid, "书的id");
 		var data = new Date().getTime();
 		var res = wx.getStorageSync("bookstore");
-		var res2 = wx.getStorageSync("readstore");
 		var findIndex = res.findIndex((item) => item.id === bookid);
-		if (res2) {
-			var findIndex2 = res2.findIndex((item) => item.id === bookid);
-			if (findIndex2 != -1) {
-				console.log(findIndex2);
-				// res2[findIndex2].id = res[findIndex].id;
-				// res2[findIndex2].name = res[findIndex].name;
-				console.log(res);
-				res2[findIndex2].chapterId = res[findIndex].chapterId;
-				res2[findIndex2].chapterIndex = res[findIndex].chapterId;
-				res2[findIndex2].author = res[findIndex].author;
-				res2[findIndex2].cover = res[findIndex].cover;
-				res2[findIndex2].isCheck = res[findIndex].isCheck;
-				res2[findIndex2].timeStamp = data;
-			} else if (findIndex2 == -1) {
-				console.log("aaano不存在");
-				res2.push({
-					id: res[findIndex].id,
-					name: res[findIndex].name,
-					chapterId: res[findIndex].chapterId,
-					chapterIndex: 1,
-					author: res[findIndex].author,
-					cover: res[findIndex].cover,
-					isCheck: res[findIndex].isCheck,
-					timeStamp: data
-				});
-			}
-		} else {
+		if (findIndex != -1) {
+			res[findIndex].timeStamp = data;
+			res[findIndex].chapterIndex = 1;
+		}
+		var res2 = wx.getStorageSync("readstore");
+		if (!res2) {
 			res2 = [];
 			res2.push({
 				id: res[findIndex].id,
 				name: res[findIndex].name,
-				chapterId: res[findIndex].chapterId,
-				chapterIndex: 1,
 				author: res[findIndex].author,
 				cover: res[findIndex].cover,
 				isCheck: res[findIndex].isCheck,
-				timeStamp: data
+				timeStamp: res[findIndex].timeStamp
 			});
-		}
-		if (findIndex != -1) {
-			res[findIndex].timeStamp = data;
-			res[findIndex].chapterIndex = res2[findIndex].chapterIndex;
+		} else {
+			var findIndex2 = res2.findIndex((item) => item.id === bookid);
+			if (!findIndex2) {
+				res2.push({
+					id: res[findIndex].id,
+					name: res[findIndex].name,
+					author: res[findIndex].author,
+					cover: res[findIndex].cover,
+					isCheck: res[findIndex].isCheck,
+					timeStamp: res[findIndex].timeStamp
+				});
+			} else {
+				res2[findIndex2].id = res[findIndex].id;
+				res2[findIndex2].name = res[findIndex].name;
+				res2[findIndex2].author = res[findIndex].author;
+				res2[findIndex2].cover = res[findIndex].cover;
+				res2[findIndex2].isCheck = res[findIndex].isCheck;
+				res2[findIndex2].timeStamp = res[findIndex].timeStamp;
+			}
 		}
 
 		wx.setStorageSync("bookstore", res);
@@ -203,7 +193,7 @@ Page({
 					}
 				}
 
-				var r1 = wx.getStorageSync("bookstore");
+				var r1 = wx.getStorageSync("readstore");
 			}
 		}
 	},
@@ -242,7 +232,7 @@ Page({
 		var cid = this.data.cellid;
 		// 获取缓存中的数据
 		var list = this.data.bookracklist;
-		var r2 = wx.getStorageSync("bookstore");
+		var r2 = wx.getStorageSync("readstore");
 
 		// 如果全选
 
@@ -254,7 +244,7 @@ Page({
 				isAll: !isall
 			});
 
-			var r1 = wx.getStorageSync("bookstore");
+			var r1 = wx.getStorageSync("readstore");
 		}
 		// 如果没有全选
 		else {
@@ -268,10 +258,10 @@ Page({
 			this.setData({
 				bookracklist: list
 			});
-			var r1 = wx.getStorageSync("bookstore");
+			var r1 = wx.getStorageSync("readstore");
 		}
 
-		var res1 = wx.getStorageSync("bookstore");
+		var res1 = wx.getStorageSync("readstore");
 
 		for (let i = 0; i < cid.length; i++) {
 			var index = res1.findIndex((item) => {
@@ -279,10 +269,10 @@ Page({
 			});
 			if (index != -1) {
 				//splice返回被删除的元素
-				var result = res1.splice(index, 1);
+				 res1.splice(index, 1);
 			}
 		}
-		wx.setStorageSync("bookstore", res1);
+		wx.setStorageSync("readstore", res1);
 
 		this.setData({
 			cellid: []

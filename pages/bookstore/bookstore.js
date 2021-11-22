@@ -1,5 +1,6 @@
 // pages/bookstore/bookstore.js
-import {requestGet,bannerURL, homeURL} from "../../utils/reqeust"
+import {requestGet,bannerURL, homeURL} from "../../utils/reqeust";
+import Toast from "../../components/vant/toast/toast";
 Page({
 
   /**
@@ -67,14 +68,23 @@ Page({
     this.getBannerData();
   },
   async getBannerData() {
+    Toast.loading({
+			duration: 0,
+			message: "加载中...",
+			forbidClick: true,
+			loadingType: "spinner",
+			selector: "#van-toast"
+		});
     const result = await requestGet(bannerURL);
     const resulth=await requestGet(homeURL);
+  
     this.setData({
       banner: result.data.spread[0].advs,
-      shortps:resulth.ResponseObject[0].Cards[2].Data,
+      shortps:resulth.ResponseObject[0].Cards[4].Data,
       populars:resulth.ResponseObject[0].Cards[3].Data,
-      likelist:[...resulth.ResponseObject[0].Cards[1].Data,...resulth.ResponseObject[0].Cards[4].Data],
+      likelist:[...resulth.ResponseObject[0].Cards[0].Data,...resulth.ResponseObject[0].Cards[1].Data,...resulth.ResponseObject[0].Cards[2].Data,...resulth.ResponseObject[0].Cards[5].Data,...resulth.ResponseObject[0].Cards[6].Data],
     });
+    Toast.clear();
   },
 
 

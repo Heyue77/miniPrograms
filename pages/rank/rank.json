@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "van-tab": "../../components/vant/tab/index",
-    "van-tabs": "../../components/vant/tabs/index"
+    "van-tabs": "../../components/vant/tabs/index",
+    "van-toast": "../../components/vant/toast/index"
   },
   "navigationBarTitleText": "排行榜"
 }

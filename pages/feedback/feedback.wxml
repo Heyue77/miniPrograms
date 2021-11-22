@@ -1,0 +1,15 @@
+<!-- feedback.wxml -->
+<view class="body">
+    <view class="box">
+        <!-- <textarea class="feedback" placeholder="请输入反馈">
+        </textarea>
+        <input class="tel" placeholder="手机："></input>
+         <button id="send" hover-class="button-hover">提交</button> -->
+        <view class="text1">尊敬的客户，您好：
+        <view ></view>
+        
+            <view  class="text2"  >您对我们的小程序还满意吗？欢迎提出意见与建议，我们会认真对待您的反馈，感谢您的关注与支持。</view>
+        </view>
+        <button open-type='feedback' type='primary'>问题反馈</button>
+    </view>
+</view>

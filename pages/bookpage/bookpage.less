@@ -1,39 +1,41 @@
 .container {
     // padding : 20rpx;
     position: relative;
-    height  : 530px;
+    height  : 100vh;
 
     .scroll {
         padding   : 20rpx;
         box-sizing: border-box;
+        // height    : 93vh;
 
         .title {
             text-align: center;
         }
 
         .content {
+            height     : 93vh;
+            display    : inline-block;
             line-height: 60rpx;
             text-indent: 2em;
         }
 
+        .change {
+            display: flex;
 
+            .item {
+                flex       : 1;
+                text-align : center;
+                border     : 1px solid #ccc;
+                height     : 60rpx;
+                line-height: 60rpx;
 
-    }
-
-    .change {
-        display: flex;
-
-
-        .item {
-            flex                  : 1;
-            text-align            : center;
-            // background-color   : #ccc;
-            border                : 1px solid #ccc;
-            height                : 60rpx;
-            line-height           : 60rpx;
-            // border-radius   : 20rpx;
+            }
         }
+
     }
+
+
+
 
 
     .menu {
@@ -86,7 +88,7 @@
     .catapage {
         width           : 100%;
         position        : fixed;
-        height          : 605px;
+        height          : 100vh;
         top             : 0;
         left            : 0;
         background-color: pink;

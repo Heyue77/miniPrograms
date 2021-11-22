@@ -1,1 +1,89 @@
-.container{position:relative;height:530px}.container .scroll{padding:20rpx;box-sizing:border-box}.container .scroll .title{text-align:center}.container .scroll .content{line-height:60rpx;text-indent:2em}.container .change{display:flex}.container .change .item{flex:1;text-align:center;border:1px solid #ccc;height:60rpx;line-height:60rpx}.container .menu{position:fixed;bottom:0;left:0;height:300rpx;width:100%;color:#000;font-size:16px;background-color:#eee}.container .menu .list{display:flex;border-bottom:1px solid #e3e3e3}.container .menu .item{flex:1;text-align:center;height:100rpx;line-height:100rpx}.container .menu .color{display:flex;border-bottom:1px solid #e3e3e3}.container .menu .color .white{background-color:#eaeaea}.container .menu .color .black{background-color:#666}.container .menu .color .green{background-color:#d5f6d6}.container .menu .font{display:flex;border-bottom:1px solid #e3e3e3}.container .catapage{width:100%;position:fixed;height:605px;top:0;left:0;background-color:pink;display:none}.container .catapage .cancel{height:80rpx;width:100%;text-align:center;line-height:80rpx;position:fixed;bottom:0;left:0;background-color:#fff}.container .fold{display:none}.container .unfold{display:block}
+.container {
+  position: relative;
+  height: 100vh;
+}
+.container .scroll {
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.container .scroll .title {
+  text-align: center;
+}
+.container .scroll .content {
+  height: 93vh;
+  display: inline-block;
+  line-height: 60rpx;
+  text-indent: 2em;
+}
+.container .scroll .change {
+  display: flex;
+}
+.container .scroll .change .item {
+  flex: 1;
+  text-align: center;
+  border: 1px solid #ccc;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.container .menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 300rpx;
+  width: 100%;
+  color: #000;
+  font-size: 16px;
+  background-color: #eee;
+}
+.container .menu .list {
+  display: flex;
+  border-bottom: 1px solid #e3e3e3;
+}
+.container .menu .item {
+  flex: 1;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.container .menu .color {
+  display: flex;
+  border-bottom: 1px solid #e3e3e3;
+}
+.container .menu .color .white {
+  background-color: #eaeaea;
+}
+.container .menu .color .black {
+  background-color: #666;
+}
+.container .menu .color .green {
+  background-color: #d5f6d6;
+}
+.container .menu .font {
+  display: flex;
+  border-bottom: 1px solid #e3e3e3;
+}
+.container .catapage {
+  width: 100%;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: pink;
+  display: none;
+}
+.container .catapage .cancel {
+  height: 80rpx;
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+}
+.container .fold {
+  display: none;
+}
+.container .unfold {
+  display: block;
+}

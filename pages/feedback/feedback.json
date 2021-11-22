@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "问题反馈",
+  "navigationBarBackgroundColor": "#d5a3c9",
+  "navigationBarTextStyle": "white",
+  "disableScroll":true
+}

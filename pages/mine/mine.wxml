@@ -1,2 +1,50 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<!-- mine.wxml -->
+<view wx:if="{{tag}}" class="root">
+  <!-- 个人信息 -->
+  <view class="profile">
+    <view class="body">
+      <view class="notice">
+        <view class="title">请先登录</view>
+        <view class="text">阅读进度、账号信息跨设备同步</view>
+        <button id="login" hover-class="button-hover" bindtap="login1">马上登录</button>
+      </view>
+    </view>
+  </view>
+  <!-- 功能部分 -->
+  <view class="function">
+    <van-cell-group>
+      <van-cell title="帮助中心" is-link bindtap="help" />
+      <van-cell title="问题反馈" is-link bindtap="feedback" />
+    </van-cell-group>
+  </view>
+</view>
+<view wx:else class="root2">
+  <!-- 个人信息 -->
+  <view class="profile">
+    <view class="body">
+      <view class="notice">
+        <view class="user">
+          <view class="img">
+            <open-data type="userAvatarUrl"></open-data>
+          </view>
+          <view class="name">
+            <open-data type="userNickName"></open-data>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 功能部分 -->
+  <view class="function">
+    <van-cell-group>
+      <van-cell title="帮助中心" is-link bindtap="help" />
+      <van-cell title="浏览记录" is-link url="/pages/readhistory/readhistory" />
+      <van-cell title="问题反馈" is-link bindtap="feedback" />
+      <van-cell  bindtap="loginout">
+        <view slot="title">
+          <navigator class="" target="miniProgram" data-tag="false" hover-class="none" open-type="exit">退出登录</navigator>
+        </view>
+      </van-cell>
+    </van-cell-group>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+<view class="body">
+    <view class="box">
+        <view class="word">
+            <view class="Q">Q:什么是“小众闲书小程序”?</view>
+            <view class="A">A : 小众闲书小程序是小众闲书App出品的官方小程序，为您提供最精品的正版书籍。更多精彩请使用小众闲书App~</view>
+            <view class="Q">Q:登录有什么用?</view>
+            <view class="A">A:登录后可以保存阅读进度和历史， 下次再打开小程序就能继续阅读啦~</view>
+            <view class="Q">Q:书币&书券是什么?</view>
+            <view class="A">A:书币是小众闲书内的付费道具，可通过充值获得。书券相当于书币抵用券，书券有使用期限，通常为发放后的7天。</view>
+            <view class="Q">Q:书币与书券、人民币的换算规则?</view>
+            <view class="A">A: 100书币=1人民币，100书券=100书币。</view>
+            <view class="Q">Q:如何删除书架里的书?</view>
+            <view class="A">A:左滑书架里想要删除的书，点击“确认删除”即可。</view>
+            <view class="Q">Q:为什么我在付费预览章节不能调节文字尺寸?</view>
+            <view class="A">A:预览章节的排版是有严格标准的，所以不能调节，敬请谅解。</view>
+            <view class="Q">Q: iPhone怎么充值?</view>
+            <view class="A">A:目前小程序还不支持iPhone充值，相关功能请使用小众闲书App。</view>
+            <view class="Q">Q:什么是“租书”?</view>
+            <view class="A">A:花费较少的书币可在一段时间内畅读整本小说。</view>
+            <view class="Q">Q:什么是“购买章节”?</view>
+            <view class="A">A:花费一定的书币可以永久解锁章节，书读百遍其义自见~</view>
+        </view>
+    </view>
+</view>

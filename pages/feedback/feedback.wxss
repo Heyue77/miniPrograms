@@ -1,0 +1,27 @@
+.body {
+  height: 1205rpx;
+  padding-top: 10rpx;
+  background-color: #d5a3c9;
+}
+.box {
+  height: 1905rpx;
+  margin-top: 10rpx;
+  background-color: #ffffff;
+  border-radius: 50rpx 50rpx 0 0;
+  box-shadow: 0 -5rpx 20rpx #D09EC4;
+}
+.box .text1 {
+  font-size: 18px;
+  padding: 50rpx 0 0 20rpx;
+}
+.box .text2 {
+  text-indent: 60rpx;
+  text-align: left;
+  font-size: 16px;
+  padding: 30rpx 0 0 0rpx;
+}
+.box button {
+  margin-top: 100rpx;
+  width: 600rpx;
+  background: linear-gradient(to right, #E6B4E6, #FAC8FA) !important;
+}

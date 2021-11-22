@@ -1,1 +1,173 @@
-/* pages/mine/mine.wxss */
+page {
+  height: 100%;
+}
+.root {
+  height: 100%;
+}
+.root .profile {
+  padding-top: 10rpx;
+  height: 350rpx;
+  background-color: #d5a3c9;
+}
+.root .profile .body {
+  height: 350rpx;
+  margin-top: 10rpx;
+  background-color: #ffffff;
+  border-radius: 50rpx 50rpx 0 0;
+  box-shadow: 0 -5rpx 20rpx #D09EC4;
+}
+.root .profile .body .notice {
+  position: absolute;
+  width: 690rpx;
+  height: 280rpx;
+  background-color: #ffffff;
+  border-radius: 20rpx 20rpx 20rpx 20rpx;
+  margin: 40rpx 0rpx 30rpx 30rpx;
+  box-shadow: 0 5rpx 20rpx #FFD0F6;
+}
+.root .profile .body .notice .title {
+  width: 690rpx;
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 16px;
+  color: #3C3C3C;
+}
+.root .profile .body .notice .text {
+  width: 690rpx;
+  margin-top: 15rpx;
+  text-align: center;
+  font-size: 12px;
+  color: #6C6C6C;
+}
+.root .profile .body .notice #login {
+  width: 600rpx;
+  height: 80rpx;
+  margin-top: 20rpx;
+  border-radius: 40rpx;
+  background: linear-gradient(to right, #E6B4E6, #FAC8FA);
+  font-size: 16px;
+  color: #ffffff;
+}
+.root .function {
+  height: 1744rpx;
+}
+.root .function .tabs {
+  height: 100rpx;
+  background-color: #ffffff;
+  display: flex;
+}
+.root .function .tabs .item {
+  height: 100rpx;
+  width: 750rpx;
+  font-size: 16px;
+  margin: 0 25rpx 0 25rpx;
+  color: #272727;
+  padding-top: 35rpx;
+}
+.root .function .tabs .item image {
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 550rpx;
+}
+.root .function .tabs .border {
+  border-top: 1px solid #FCFCFC;
+}
+.root .button-hover {
+  opacity: 0.7;
+  background: linear-gradient(to right, #E6B4E6, #FAC8FA);
+}
+.root2 {
+  height: 100%;
+}
+.root2 .profile {
+  padding-top: 10rpx;
+  height: 270rpx;
+  background-color: #d5a3c9;
+}
+.root2 .profile .body {
+  height: 270rpx;
+  margin-top: 10rpx;
+  background-color: #ffffff;
+  border-radius: 50rpx 50rpx 0 0;
+  box-shadow: 0 -5rpx 20rpx #d09ec4;
+}
+.root2 .profile .body .notice {
+  position: absolute;
+  width: 690rpx;
+  height: 200rpx;
+  margin-left: 20rpx;
+  border-radius: 20rpx 20rpx 20rpx 20rpx;
+  margin: 40rpx 0rpx 30rpx 30rpx;
+  box-shadow: 0 5rpx 20rpx #ffd0f6;
+}
+.root2 .profile .body .notice .user {
+  position: absolute;
+  width: 690rpx;
+  margin: 20rpx 0 0 20rpx;
+  color: #3c3c3c;
+}
+.root2 .profile .body .notice .user .img {
+  overflow: hidden;
+  display: block;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100rpx;
+  border: 2rpx solid #d09ec4;
+  margin-top: 20rpx;
+}
+.root2 .profile .body .notice .user .name {
+  font-size: 16px;
+  margin-top: -75rpx;
+  margin-left: 120rpx;
+}
+.root2 .function {
+  height: 1744rpx;
+}
+.root2 .function .tabs {
+  height: 100rpx;
+  background-color: #ffffff;
+  display: flex;
+}
+.root2 .function .tabs .item {
+  height: 100rpx;
+  width: 750rpx;
+  font-size: 16px;
+  margin: 0 25rpx 0 25rpx;
+  color: #272727;
+  padding-top: 35rpx;
+  display: flex;
+  flex-direction: column;
+}
+.root2 .function .tabs .item .img {
+  margin: -40rpx 0 0 660rpx;
+  flex: 1;
+}
+.root2 .function .tabs .item image {
+  width: 20rpx;
+  height: 20rpx;
+}
+.root2 .function .tabs .item #feedback {
+  background-color: #ffffff;
+}
+.root2 .function .tabs .border {
+  border-top: 1px solid #d0d0d0;
+}
+.root2 button {
+  flex: 1;
+  height: 80rpx !important;
+  width: 650rpx !important;
+  text-align: left !important;
+  font-size: 14px !important;
+  color: #272727 !important;
+  background-color: #fff !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0;
+}
+.root2 button::after {
+  border: none !important;
+}
+.root2 .button-hover {
+  opacity: 0.7;
+  background: linear-gradient(to right, #e6b4e6, #fac8fa);
+}

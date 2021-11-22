@@ -1,66 +1,71 @@
-// pages/mine/mine.js
+const app = getApp();
 Page({
+	data: {
+		tag: true
+	},
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
+	help() {
+		wx.navigateTo({
+			url: "/pages/help/help"
+		});
+	},
 
-  },
+	feedback() {
+		wx.navigateTo({
+			url: "/pages/feedback/feedback"
+		});
+	},
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+	login1() {
+		// var loding=true;
+		// wx.setStorage("key",loding)
+		var that = this;
+		// 查看是否授权
+		wx.getSetting({
+			success: function (res) {
+				if (res.authSetting["scope.userInfo"]) {
+					wx.getUserInfo({
+						success: function (res) {
+							that.setData({
+								tag: false
+							});
+							var loding=true;
+							wx.setStorage({
+ 
+								key:"key",
+							   
+								data:loding
+							   
+							  })
+							  
+						}
+					});
+				} else {
+					// 用户没有授权
+					wx.navigateTo({
+						url: "/pages/login/login"
+					});
+				}
+			}
+		});
+	},
 
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
-})
+	loginout() {
+		var that = this;
+		wx.showModal({
+			title: "提示",
+			content: "您确定要退出登录吗",
+			success: function (res) {
+				if (res.confirm) {
+					console.log("用户点击确定");
+					wx.removeStorageSync('key');
+					that.setData({
+						tag: true
+					});
+				} else {
+					console.log("用户点击取消");
+				}
+			}
+		});
+	}
+});

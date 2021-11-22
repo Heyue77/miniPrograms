@@ -1,3 +1,10 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-cell": "../../components/vant/cell/index",
+    "van-cell-group": "../../components/vant/cell-group/index"
+  },
+  "navigationBarTitleText": "小众闲书",
+  "navigationBarBackgroundColor": "#d5a3c9",
+  "navigationBarTextStyle": "white",
+  "disableScroll":true
 }

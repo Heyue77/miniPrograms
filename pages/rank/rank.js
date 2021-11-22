@@ -1,5 +1,6 @@
 // pages/rank/rank.js
 import { requestGet, rankURL } from "../../utils/reqeust";
+import Toast from "../../components/vant/toast/toast";
 Page({
 	/**
 	 * 页面的初始数据
@@ -23,20 +24,28 @@ Page({
 		this.getRankData();
 	},
 	async getRankData() {
+		Toast.loading({
+			duration: 0,
+			message: "加载中...",
+			forbidClick: true,
+			loadingType: "spinner",
+			selector: "#van-toast"
+		});
 		const result = await requestGet(rankURL);
-		console.log(result.ResponseObject[0].module[0].itemList.bookList),
-			this.setData({
-				module: result.ResponseObject[0].module,
-				malehot: result.ResponseObject[0].module[0].itemList.bookList,
-				femalehot: result.ResponseObject[0].module[1].itemList.bookList,
-				malepop: result.ResponseObject[0].module[2].itemList.bookList,
-				femalepop: result.ResponseObject[0].module[3].itemList.bookList,
+		console.log(result.ResponseObject[0].module[0].itemList.bookList);
+		Toast.clear();
+		this.setData({
+			module: result.ResponseObject[0].module,
+			malehot: result.ResponseObject[0].module[0].itemList.bookList,
+			femalehot: result.ResponseObject[0].module[1].itemList.bookList,
+			malepop: result.ResponseObject[0].module[2].itemList.bookList,
+			femalepop: result.ResponseObject[0].module[3].itemList.bookList,
 
-				malehoturl: result.ResponseObject[0].module[0].more.slice(10),
-				femalehoturl: result.ResponseObject[0].module[1].more.slice(10),
-				malepopurl: result.ResponseObject[0].module[2].more.slice(10),
-				femalepopurl: result.ResponseObject[0].module[3].more.slice(10)
-			});
+			malehoturl: result.ResponseObject[0].module[0].more.slice(10),
+			femalehoturl: result.ResponseObject[0].module[1].more.slice(10),
+			malepopurl: result.ResponseObject[0].module[2].more.slice(10),
+			femalepopurl: result.ResponseObject[0].module[3].more.slice(10)
+		});
 	},
 
 	/**

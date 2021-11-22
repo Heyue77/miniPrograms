@@ -6,6 +6,5 @@
     "van-cell": "../../components/vant/cell/index",
     "van-cell-group": "../../components/vant/cell-group/index"
   },
-  "enablePullDownRefresh": true,
-  "onReachBottomDistance": 50
+  "onReachBottomDistance": 100
 }

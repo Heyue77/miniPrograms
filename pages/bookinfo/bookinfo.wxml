@@ -1,4 +1,4 @@
-<scroll-view scroll-y="true" class="container">
+<scroll-view scroll-y="true" class="container" show-scrollbar="falsef">
     <view class="book">
         <image class="bookimg" src="{{bookinfos.cover}}" mode="widthFix"></image>
         <view class="booktitle">{{bookinfos.name}}</view>
@@ -27,10 +27,6 @@
             <text class="num">{{bookinfos.star}}</text>
             <text class="name">好评率</text>
         </view>
-        <!-- <view class="box">
-            <text class="num">{{bookinfos.latelyFollower}}</text>
-            <text class="name">收藏人数</text>
-        </view> -->
     </view>
     <view class="info">
         <view class="title">简介</view>
@@ -52,7 +48,7 @@
                     <view class="content">{{item.Content}}</view>
                 </view>
                 <view class="score">
-                    <van-rate value="{{item.Score==0?'5':item.Score}}" allow-half void-icon="star" color="#ffa500" void-color="#aaa" size="14px" />
+                    <van-rate value="{{ item.Score==0?'5':item.Score }}" allow-half void-icon="star" color="#ffa500" void-color="#aaa" size="14px" />
                 </view>
             </van-cell>
         </van-cell-group>
@@ -67,8 +63,8 @@
     </view>
 </scroll-view>
 <view class="btn">
-    <navigator class="butt add">加入书架</navigator>
-    <navigator class="butt read" url="/pages/bookpage/bookpage?bookId={{bookinfos.bookId}}&chapterId={{bookinfos.chapterId}}">
+    <view class="butt add {{tag?'addcolor':''}}" catchtap = "sendid"  >{{msg}}</view>
+    <navigator class="butt read" url="/pages/bookpage/bookpage?bookId={{bookinfos.bookId}}&chapterId={{bookinfos.chapterId}}" catchtap = "startid">
         开始阅读
     </navigator>
 </view>

@@ -1,0 +1,42 @@
+var getDateDiff = function getDateDiff(dateTime) {
+    var dateTimeStamp = getDate(dateTime);
+    var result = '';
+    var minute = 1000 * 60;
+    var hour = minute * 60;
+    var day = hour * 24;
+    var halfamonth = day * 15;
+    var month = day * 30;
+    var year = day * 365;
+    var now = getDate();
+    var diffValue = now - dateTimeStamp;
+    if (diffValue < 0) {
+      return;
+    }
+    var monthEnd = diffValue / month;
+    var weekEnd = diffValue / (7 * day);
+    var dayEnd = diffValue / day;
+    var hourEnd = diffValue / hour;
+    var minEnd = diffValue / minute;
+    var yearEnd = diffValue / year;
+    if (yearEnd >= 1) {
+      result = dateTime;
+    } else if (monthEnd >= 1) {
+      result = "" + parseInt(monthEnd) + "月前";
+    } else if (weekEnd >= 1) {
+      result = "" + parseInt(weekEnd) + "周前";
+    } else if (dayEnd >= 1) {
+      result = "" + parseInt(dayEnd) + "天前";
+    } else if (hourEnd >= 1) {
+      result = "" + parseInt(hourEnd) + "小时前";
+    } else if (minEnd >= 1) {
+      result = "" + parseInt(minEnd) + "分钟前";
+    } else {
+      result = "刚刚";
+    }
+    return result;
+  }
+  
+  module.exports = {
+    getDateDiff: getDateDiff
+  }
+  

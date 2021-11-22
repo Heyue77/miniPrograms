@@ -12,8 +12,13 @@
     "pages/rank/rank",
     "pages/rankmore/rankmore",
     "pages/search/search",
-        "pages/lista/lista",
-        "pages/listaa/listaa"
+    "pages/lista/lista",
+    "pages/listaa/listaa",
+    "pages/login/login",
+    "pages/feedback/feedback",
+    "pages/help/help",
+    "pages/readhistory/readhistory"
+
 
   ],
   "window":{

@@ -1,7 +1,7 @@
 <!-- pages/search/search.wxml -->
 <!-- <view class="searchbox"> -->
 <!-- <text class="goback iconfont icon-changyong_fanhui" bindtap = "goback"> </text> -->
-<van-search  class="search" value="{{ value }}" shape="round" background="#e3dae9" placeholder="请输入搜索关键词" bind:change="onChange" bind:search="onSearch" />
+<van-search class="search" value="{{ value }}" shape="round" background="#e3dae9" placeholder="请输入搜索关键词" bind:change="onChange" bind:search="onSearch" />
 <!-- </view> -->
 <view class="{{showtitle?'':'shownone'}}">{{value}}的相关作品</view>
 <van-cell-group>
@@ -11,28 +11,22 @@
                 <image class="icon" src="{{item.cover}}" />
             </view>
             <view slot="title">
-                <text wx:for="{{item.name}}" wx:key="index" class="{{item == value ? 'searchHigh' : '' }}">{{item}}</text>   
+                <rich-text nodes="{{item.name}}"></rich-text>
             </view>
             <view slot="label">
-                <view class="shortinfo">
-                    <!-- <text wx:for="{{item.introduce}}" wx:key="{{index}}" class="{{item == value ? 'searchHigh' : '' }}">{{item}}</text> -->
-                    {{item.introduce}}
-                </view>
+                <!-- <view class=""> -->
+                    <rich-text nodes="{{item.introduce}}" class="shortinfo"></rich-text>
+                <!-- </view> -->
                 <view class="auty">
                     <view class="author">
                         <text class="iconfont icon-fl-renyuan"></text>
-                        <text wx:for="{{item.author}}" wx:key="index" class="{{item == value ? 'searchHigh' : '' }}">{{item}}</text>
-                        <!-- {{item.author}} -->
+                        <rich-text nodes="{{item.author}}"></rich-text>
                     </view>
                     <view class="type">
-                        <!-- {{item.status}} -->
-                        <text wx:for="{{item.status}}" wx:key="index" class="{{item == value ? 'searchHigh' : '' }}">{{item}}</text>              
+                        <rich-text nodes="{{item.status}}"></rich-text>
                     </view>
                     <view class="type">
-                     {{item.score}}分
-                        <!-- <text wx:for="{{item.score}}" wx:key="{{index}}" class="{{item == value ? 'searchHigh' : '' }}">
-                            {{item}}分
-                        </text> -->
+                        <rich-text nodes="{{item.score}}分"></rich-text>
                     </view>
                 </view>
             </view>

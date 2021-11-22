@@ -1,18 +1,20 @@
 <!-- pages/bookrack/bookrack.wxml -->
-<!-- <wxs src="../wxs/time.wxs" module="DateModule"></wxs> -->
-<wxs src="../wxs/tools.wxs" module="DateModule1"></wxs>
+<wxs src="../wxs/time.wxs" module="DateModule"></wxs>
 <view class="container">
+  <!-- <view wx:if="{{!bookShelfData.length}}" class='noBooks'>
+      主人还没收藏书籍哦，请去书城收藏吧！
+    </view> -->
   <view class='bookrackContainer'>
     <view class="titleview">
-      <view class="titleTag">我的书架</view>
+      <view class="titleTag">浏览记录</view>
       <view wx:if="{{tag}}" class="go " bindtap="clickgo">管理</view>
       <view wx:else class="go " bindtap="checkAll">全选</view>
     </view>
-    <view wx:if="{{!bookracklist.length}}" class='noBooks'>主人还没收藏书籍哦，请去书城收藏吧！</view>
+    <view wx:if="{{!bookracklist.length}}" class='noBooks'>主人暂无阅读浏览记录哦，快去书城浏览吧！</view>
     <van-cell-group>
       <checkbox-group>
         <view wx:for="{{bookracklist}}" wx:for-item="item" wx:key="id">
-          <van-cell  url="/pages/bookpage/bookpage?bookId={{item.id}}&chapterId={{item.chapterId}}" id="van-cellClass" center use-label-slot title="{{item.name}}" bindtap="gopagedata" data-id="{{item.id}}">
+           <van-cell  url="/pages/bookpage/bookpage?bookId={{item.id}}&chapterId={{item.chapterId}}" id="van-cellClass" center use-label-slot title="{{item.name}}" bindtap="gopagedata" data-id="{{item.id}}">
             <view slot="icon" class="iconview">
               <image class="icon" src="{{item.cover}}" />
             </view>
@@ -21,12 +23,7 @@
                 <text class="authorText">作者:</text>
                 {{item.author}}
               </view>
-              <view class="readNum {{item.chapterIndex?'':'disnone'}}">
-                读到第{{item.chapterIndex}}章
-              </view>
-              <view class='readtime'>
-                最近阅读：{{item.timeStamp?DateModule1.getDateDiff(item.timeStamp):'无'}}
-              </view>
+             <view class='readtime'>{{DateModule.ToDate(item.timeStamp)}}浏览</view>
             </view>
             <checkbox class="{{hovercb}}" catchtap="chlik" data-cellid="{{item.id}}" data-checked="{{checked}}" value="{{item.name}}" checked="{{item.isCheck}}"></checkbox>
           </van-cell>

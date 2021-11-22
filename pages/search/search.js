@@ -1,11 +1,11 @@
 // pages/search/search.js
 import { requestGet, searchURL } from "../../utils/reqeust";
 const app = getApp();
-const getInf = (str, key) =>
-	str
-		.toString()
-		.replace(new RegExp(`${key}`), `%%${key}%%`)
-		.split("%%");
+// const getInf = (str, key) =>
+// 	str
+// 		.toString()
+// 		.replace(new RegExp(`${key}`), `%%${key}%%`)
+// 		.split("%%");
 Page({
 	/**
 	 * 页面的初始数据
@@ -25,43 +25,33 @@ Page({
 	onLoad: function (options) {
 		console.log(options);
 		this.setData({
-			value: options.keyword
+			value: options.keyword 
 		});
-		this.getSearchData();
+		this.getSearchData()
 	},
 
 	async getSearchData() {
 		const result = await requestGet(searchURL + this.data.value);
 		console.log(result);
 		this.setData({
-			booklist: [
-				...this.data.booklist,
-				...result.ResponseObject[0].module.bookList
-			],
+			booklist: [...this.data.booklist,...result.ResponseObject[0].module.bookList]||[],
 			loading: false
 		});
-		const newData = this.data.booklist;
-		for (let i = 0; i < this.data.booklist.length; i++) {
-			const dic = this.data.booklist[i];
-			const newDic = newData[i];
-			const name = dic["name"];
-			newDic["name"] = getInf(name, this.data.value);
-			const author = dic["author"];
-			newDic["author"] = getInf(author, this.data.value);
-			const status = dic["status"];
-			newDic["status"] = getInf(status, this.data.value);
-			// const score =dic["score"];
-			// newDic["score"] = getInf(score, this.data.value);
-			// var introduce = dic["introduce"];
-			// newDic["introduce"] = getInf(introduce, this.data.value);
-		}
+		var searchList = this.data.booklist;
+		searchList.forEach(v=>{    
+			v.name = v.name.replace(new RegExp(this.data.value,"g"),"<span style='color: #c74343f6;'>"+this.data.value+"</span>")
+			v.name = `<div class="tp">${v.name}</div>`
+			v.author = v.author.replace(new RegExp(this.data.value,"g"),"<span style='color: #c74343f6;'>"+this.data.value+"</span>")
+			v.author = `<div class="tp">${v.author}</div>`
+			v.status = v.status.replace(new RegExp(this.data.value,"g"),"<span style='color: #c74343f6;'>"+this.data.value+"</span>")
+			v.status = `<div class="tp">${v.status}</div>`
+			v.introduce = v.introduce.replace(new RegExp(this.data.value,"g"),"<span style='color: #c74343f6;'>"+this.data.value+"</span>")
+			v.introduce = `<div class="tp">${v.introduce}</div>`
+		  })
 		this.setData({
-			booklist: newData
+			booklist: searchList
 		});
 	},
-	// trim: function (s) {
-	// 	return s.replace(/(^\s*)|(\s*$)/g, "");
-	// },
 	onChange(e) {
 		this.setData({
 			value: e.detail,

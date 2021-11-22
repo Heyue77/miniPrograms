@@ -42,11 +42,12 @@
 	text-align: center;
 	margin: 0 auto;
 }
-.searchHigh{
-    color:red
-}
+
 .shownone{
 	display:none
+}
+rich-text{
+	display:inline-block;
 }
 /* .searchbox{
 	display:flex;

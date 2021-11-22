@@ -13,7 +13,7 @@
                     {{item.author}}
                 </view>
                 <view class="type">{{item.category}}</view>
-                <view class="type">{{item.score}}分</view>
+                <view class="type scorecolor">{{item.score}}分</view>
             </view>
         </view>
     </van-cell>
